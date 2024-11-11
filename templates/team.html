@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <h1 class="text-2xl font-bold mb-4">Our Team</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Team Member 1 -->
+        <div class="bg-white shadow-md rounded p-4 text-center">
+            <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Team Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
+            <h2 class="text-xl font-semibold">Alice Johnson</h2>
+            <p class="text-gray-600">Project Manager</p>
+            <p class="mt-2 text-sm">
+                Alice has over 10 years of experience in project management and leads our team with dedication and expertise.
+            </p>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="bg-white shadow-md rounded p-4 text-center">
+            <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Team Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
+            <h2 class="text-xl font-semibold">Bob Smith</h2>
+            <p class="text-gray-600">Lead Developer</p>
+            <p class="mt-2 text-sm">
+                Bob is our lead developer, specializing in backend technologies and ensuring our platforms run smoothly.
+            </p>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="bg-white shadow-md rounded p-4 text-center">
+            <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Team Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
+            <h2 class="text-xl font-semibold">Carol Williams</h2>
+            <p class="text-gray-600">Marketing Director</p>
+            <p class="mt-2 text-sm">
+                Carol leads our marketing efforts, creating strategies that effectively promote our events and services.
+            </p>
+        </div>
+        <!-- Add more team members as needed -->
+    </div>
+</section>
+{% endblock %}

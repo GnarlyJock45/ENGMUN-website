@@ -1,0 +1,405 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Video -->
+    <div class="absolute inset-0 w-full h-full">
+        <video 
+            class="absolute top-0 left-0 w-full h-full object-cover animate-on-scroll fade-only"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="{{ url_for('static', filename='images/main_logo.png') }}">
+            <source src="{{ url_for('static', filename='videos/test_video.mp4') }}" type="video/mp4">
+        </video>
+        <!-- Overlay with gradient -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#4F7B7B]/60 to-[#3D5F5F]/60 backdrop-blur-[1px] animate-on-scroll fade-only"></div>
+    </div>
+
+    <!-- Minimal Content -->
+    <div class="relative text-center">
+        <!-- Main Tagline -->
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.2em] animate-on-scroll">
+            <span class="inline-block">FOR</span>
+            <span class="block mt-2 md:mt-4 text-[#C6943B]">SCIENCE</span>
+            <span class="inline-block mt-2 md:mt-4">AND</span>
+            <span class="block mt-2 md:mt-4 text-[#C6943B]">ENGINEERING</span>
+        </h1>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute -bottom-32 left-1/2 transform -translate-x-1/2 animate-bounce animate-on-scroll delay-500">
+            <svg class="w-6 h-6 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+    <style>
+        /* Enhance existing animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Specific animation for each text line */
+        h1 span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        
+        h1 span:nth-child(1) { animation-delay: 300ms; }
+        h1 span:nth-child(2) { animation-delay: 600ms; }
+        h1 span:nth-child(3) { animation-delay: 900ms; }
+        h1 span:nth-child(4) { animation-delay: 1200ms; }
+    </style>
+
+<!-- Features Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 animate-on-scroll delay-300 scale-fade">
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Why Choose Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="text-center p-6 animate-on-scroll delay-100 hover:transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-[#4F7B7B] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Dynamic Events</h3>
+                <p class="text-[#333333]">Experience unique and engaging events that bring together science and engineering.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="text-center p-6 animate-on-scroll delay-300 hover:transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-[#4F7B7B] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Expert Team</h3>
+                <p class="text-[#333333]">Our dedicated team ensures every event is executed with precision and excellence.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="text-center p-6 animate-on-scroll delay-500 hover:transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-[#4F7B7B] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Quality Assured</h3>
+                <p class="text-[#333333]">We maintain the highest standards in all our events and services.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Add these sections after the Features section and before the Upcoming Events section -->
+
+<!-- Message from Creators Section -->
+<section class="py-20 bg-[#4F7B7B] relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay blur-xl animate-blob"></div>
+        <div class="absolute top-80 right-20 w-72 h-72 bg-[#C6943B] rounded-full mix-blend-overlay blur-xl animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-20 left-40 w-96 h-96 bg-[#E6E6E6] rounded-full mix-blend-overlay blur-xl animate-blob animation-delay-4000"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative">
+        <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">A Message from the Creators</h2>
+            <div class="space-y-6 text-[#E6E6E6]">
+                <p class="text-lg leading-relaxed">
+                    "Welcome to ENGMUN for Science and Engineering! Our vision was to create a platform where innovation meets opportunity, where young minds can explore the boundless possibilities of science and engineering. This initiative represents our commitment to fostering a community of forward-thinking individuals who dare to dream big and make those dreams a reality."
+                </p>
+                <div class="flex flex-col items-center mt-8 space-y-4">
+                    <div class="w-20 h-1 bg-[#C6943B]"></div>
+                    <p class="text-[#C6943B] font-semibold">The ENGMUN Team</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Downloadable Files Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 animate-on-scroll delay-300 ">
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Essential Resources</h2>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Study Guide Download Card -->
+            <div class="group relative bg-[#4F7B7B] rounded-2xl p-6 transform hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#4F7B7B] to-[#3D5F5F] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                    <div class="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Study Guide</h3>
+                    <p class="text-[#E6E6E6] mb-4">Comprehensive guide covering all aspects of the conference.</p>
+                    <a href="{{ url_for('static', filename='files/file_1.pdf') }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300">
+                        <span>Download PDF</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rules & Procedures Card -->
+            <div class="group relative bg-[#C6943B] rounded-2xl p-6 transform hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#C6943B] to-[#A67B31] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                    <div class="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-.586-1.414l-3.5-3.5A2 2 0 0012.5 4H7a2 2 0 00-2 2v12a2 2 0 002 2h11z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Rules & Procedures</h3>
+                    <p class="text-white mb-4">Detailed guidelines for conference participation.</p>
+                    <a href="{{ url_for('static', filename='files/file_1.pdf') }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300">
+                        <span>Download PDF</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Committees Section -->
+<section class="py-16 bg-[#E6E6E6]">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Our Committees</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Committee 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                <div class="h-40 bg-[#4F7B7B] relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="text-xl font-bold text-white mb-2">DISEC</h3>
+                        <p class="text-[#E6E6E6] text-sm">Disarmament and International Security</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-[#333333] mb-4">Focused on questions of disarmament and international security in the field of science and technology.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Beginner Friendly</span>
+                        </div>
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>30 Delegates</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
+                        View Guide →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Committee 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                <div class="h-40 bg-[#4F7B7B] relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="text-xl font-bold text-white mb-2">ECOSOC</h3>
+                        <p class="text-[#E6E6E6] text-sm">Economic and Social Council</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-[#333333] mb-4">Addresses economic and social impact of scientific advancement and engineering innovations.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Intermediate Level</span>
+                        </div>
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>25 Delegates</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
+                        View Guide →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Committee 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                <div class="h-40 bg-[#4F7B7B] relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="text-xl font-bold text-white mb-2">UNEP</h3>
+                        <p class="text-[#E6E6E6] text-sm">Environmental Programme</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-[#333333] mb-4">Discusses environmental challenges and sustainable engineering solutions.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Advanced Level</span>
+                        </div>
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>20 Delegates</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
+                        View Guide →
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Committee 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                <div class="h-40 bg-[#4F7B7B] relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <h3 class="text-xl font-bold text-white mb-2">UNEP</h3>
+                        <p class="text-[#E6E6E6] text-sm">Environmental Programme</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-[#333333] mb-4">Discusses environmental challenges and sustainable engineering solutions.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Advanced Level</span>
+                        </div>
+                        <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>20 Delegates</span>
+                        </div>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
+                        View Guide →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Newsletter Section -->
+<!-- <section class="py-16 bg-[#4F7B7B] text-white">
+    <div class="container mx-auto px-4 max-w-2xl text-center">
+        <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+        <p class="text-[#E6E6E6] mb-8">Subscribe to our newsletter for the latest updates and event announcements.</p>
+        <form class="flex flex-col md:flex-row gap-4 justify-center">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-lg flex-grow max-w-md text-[#333333]"/>
+            <button type="submit" class="bg-[#C6943B] px-8 py-2 rounded-lg hover:bg-[#A67B31] transition-colors duration-300">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section> -->
+
+
+
+
+<style>
+    /* Base animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    /* Animation classes */
+    .animate-on-scroll {
+        opacity: 0;
+    }
+    
+    .animate-start {
+        animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    .animate-start.fade-only {
+        animation: fadeIn 1s ease forwards;
+    }
+    
+    .animate-start.scale-fade {
+        animation: scaleIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    
+    /* Delay utilities */
+    .delay-100 {
+        animation-delay: 100ms;
+    }
+    .delay-200 {
+        animation-delay: 200ms;
+    }
+    .delay-300 {
+        animation-delay: 300ms;
+    }
+    .delay-400 {
+        animation-delay: 400ms;
+    }
+    .delay-500 {
+        animation-delay: 500ms;
+    }
+    </style>
+
+
+{% endblock %}
