@@ -1,36 +1,198 @@
 {% extends 'base.html' %}
 {% block content %}
-<section>
+<!-- <section>
     <h1 class="text-2xl font-bold mb-4">Our Team</h1>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> -->
         <!-- Team Member 1 -->
-        <div class="bg-white shadow-md rounded p-4 text-center">
+        <!-- <div class="bg-white shadow-md rounded p-4 text-center">
             <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Team Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
             <h2 class="text-xl font-semibold">Alice Johnson</h2>
             <p class="text-gray-600">Project Manager</p>
             <p class="mt-2 text-sm">
                 Alice has over 10 years of experience in project management and leads our team with dedication and expertise.
             </p>
-        </div>
+        </div> -->
         <!-- Team Member 2 -->
-        <div class="bg-white shadow-md rounded p-4 text-center">
+        <!-- <div class="bg-white shadow-md rounded p-4 text-center">
             <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Team Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
             <h2 class="text-xl font-semibold">Bob Smith</h2>
             <p class="text-gray-600">Lead Developer</p>
             <p class="mt-2 text-sm">
                 Bob is our lead developer, specializing in backend technologies and ensuring our platforms run smoothly.
             </p>
-        </div>
+        </div> -->
+        
         <!-- Team Member 3 -->
-        <div class="bg-white shadow-md rounded p-4 text-center">
+        <!-- <div class="bg-white shadow-md rounded p-4 text-center">
             <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Team Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
             <h2 class="text-xl font-semibold">Carol Williams</h2>
             <p class="text-gray-600">Marketing Director</p>
             <p class="mt-2 text-sm">
                 Carol leads our marketing efforts, creating strategies that effectively promote our events and services.
             </p>
+        </div> -->
+    <!-- </div>
+</section> -->
+<!--  url_for('static', filename='images/' + member.photo)  -->
+
+<!-- <section class="py-12 mt-24">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-8">Our Team</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {% for member_id, member in team_members.items() %}
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="" alt="{{ member.name }}" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-semibold mb-2">{{ member.name }}</h2>
+                        <p class="text-gray-600 mb-4">{{ member.role }}</p>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-        <!-- Add more team members as needed -->
+    </div>
+</section> -->
+
+<section class="py-16 pt-40  bg-gradient-to-r from-[#C6943B] via-[#977734] to-[#C6943B] relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white blur-3xl animate-blob"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-white blur-3xl animate-blob animation-delay-2000"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative">
+        <!-- Section Header -->
+        <div class="text-center mb-16 opacity-0 animate-fade-in">
+            <h1 class="text-5xl font-bold text-white mb-4 relative inline-block">
+                Our Team
+                <div class="absolute -bottom-2 left-0 w-full h-1 bg-white/30 rounded-full"></div>
+            </h1>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
+            {% for member_id, member in team_members.items() %}
+                <div class="opacity-0 animate-fade-in-up" style="animation-delay: {{ loop.index0 * 0.15 }}s">
+                    <div class="group bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-500 
+                                hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20">
+                        <!-- Image Container -->
+                        <div class="relative overflow-hidden">
+                            <img src="{{ url_for('static', filename='images/person_temp.png') }}" 
+                                 alt="{{ member.name }}" 
+                                 class="w-full h-64 object-cover transform transition-transform duration-700 
+                                        group-hover:scale-110">
+                            
+                            <!-- Image Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent 
+                                        opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+
+                        <!-- Content Container -->
+                        <div class="p-8">
+                            <!-- Name and Role -->
+                            <div class="mb-4 transform transition-all duration-500 group-hover:-translate-y-1">
+                                <h2 class="text-2xl font-bold text-gray-800 mb-2">{{ member.name }}</h2>
+                                <p class="text-[#C6943B] font-medium">{{ member.role }}</p>
+                            </div>
+
+                            <!-- Bio with Gradient Fade -->
+                            <div class="relative">
+                                <p class="text-gray-600 leading-relaxed mb-6 line-clamp-3 transition-all duration-300 
+                                          group-hover:line-clamp-none">{{ member.bio }}</p>
+                                <div class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-white to-transparent 
+                                            group-hover:opacity-0 transition-opacity duration-300"></div>
+                            </div>
+
+                            <!-- Social Links -->
+                            {% if member.social_links %}
+                                <div class="flex space-x-4 mt-6 pt-4 border-t border-gray-100">
+                                    {% if member.social_links.linkedin %}
+                                        <a href="{{ member.social_links.linkedin }}" 
+                                           target="_blank" 
+                                           class="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center
+                                                        text-blue-700 hover:bg-blue-100 hover:text-blue-800 transition-colors">
+                                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.75 20h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.25 12.268h-3v-5.604c0-1.337-.025-3.063-1.867-3.063-1.869 0-2.154 1.46-2.154 2.967v5.7h-3v-11h2.882v1.5h.041c.401-.76 1.379-1.56 2.838-1.56 3.038 0 3.6 2.0 3.6 4.6v6.58z"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                    <!-- Similar styling for other social links -->
+                                    <!-- Twitter -->
+                                    {% if member.social_links.twitter %}
+                                        <a href="{{ member.social_links.twitter }}" 
+                                           target="_blank" 
+                                           class="transform transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center
+                                                        text-blue-400 hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M24 4.557a9.828 9.828 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 00-8.38 4.482c-4.083-.205-7.697-2.158-10.125-5.144a4.822 4.822 0 00-.666 2.475c0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 01-2.228-.616c-.054 1.997 1.407 3.874 3.548 4.29a4.935 4.935 0 01-2.224.084c.63 1.956 2.445 3.377 4.6 3.417a9.868 9.868 0 01-6.102 2.105c-.396 0-.787-.023-1.175-.069a13.945 13.945 0 007.557 2.212c9.054 0 14-7.496 14-13.986 0-.21-.005-.423-.014-.634A9.936 9.936 0 0024 4.557z"/>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
+
+<style>
+@keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(20px, -20px) scale(1.1); }
+    50% { transform: translate(-20px, 20px) scale(0.9); }
+    75% { transform: translate(20px, 20px) scale(1.05); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-blob {
+    animation: blob 10s infinite ease-in-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+/* Add line-clamp utilities */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.group:hover .group-hover\:line-clamp-none {
+    -webkit-line-clamp: unset;
+}
+</style>
+
+
 {% endblock %}

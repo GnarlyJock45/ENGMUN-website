@@ -1,0 +1,40 @@
+{
+    "team_members": [
+        {
+            "id": "lama_aljabr",
+            "name": "Lama Aljabr",
+            "role": "Project Manager",
+            "photo": "",
+            "bio": "Lama has over 10 years of experience in project management and leads our team with dedication and expertise.",
+            "social_links": {
+                "linkedin": "https://linkedin.com/",
+                "twitter": "https://twitter.com/"
+            }
+        },
+        {
+            "id": "test_1",
+            "name": "Test Member",
+            "role": "Lead Developer",
+            "photo": "",
+            "bio": "test_1 is our lead developer, specializing in backend technologies and ensuring our platforms run smoothly.",
+            "social_links": {
+                "linkedin": "https://linkedin.com/",
+                "github": "https://github.com/"
+            }
+        },
+        {
+            "id": "test_2",
+            "name": "Test Member 2",
+            "role": "Marketing Director",
+            "photo": "",
+            "bio": "test_2 leads our marketing efforts, creating strategies that effectively promote our events and services.",
+            "social_links": {
+                "linkedin": "https://linkedin.com/",
+                "twitter": "https://twitter.com/",
+                "instagram": "https://instagram.com/"
+            }
+        }
+
+        
+    ]
+}

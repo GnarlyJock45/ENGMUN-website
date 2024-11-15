@@ -1,0 +1,119 @@
+{
+    "committees": [
+        {
+            "id": "test_1",
+            "name": "Test 1",
+            "full_name": "Test 1 committee",
+            "level": "Beginner",
+            "delegates": 30,
+            "experience": "Not Required",
+            "description": "Detailed description...",
+            "topics": [
+                {
+                    "title": "Topic 1",
+                    "description": "Description of topic 1..."
+                },
+                {
+                    "title": "Topic 2",
+                    "description": "Description of topic 2..."
+                }
+            ],
+            "resources": [
+                {
+                    "title": "Study Guide",
+                    "description": "Complete guide for delegates",
+                    "url": "/static/files/dicesc_study_guide.pdf"
+                },
+                {
+                    "title": "Rules & Procedures",
+                    "description": "Official rules document",
+                    "url": "/static/files/dicesc_rules.pdf"
+                }
+            ]
+        },
+        {
+            "id": "test_2",
+            "name": "Test 2",
+            "full_name": "Test 2 committee",
+            "level": "Intermediate",
+            "delegates": 25,
+            "experience": "Some Required",
+            "description": "Detailed description",
+            "topics": [
+                {
+                    "title": "Topic A",
+                    "description": "Description of topic A..."
+                },
+                {
+                    "title": "Topic B",
+                    "description": "Description of topic B..."
+                }
+            ],
+            "resources": [
+                {
+                    "title": "Guidelines",
+                    "description": "Guidelines for delegates",
+                    "url": "/static/files/com1_guidelines.pdf"
+                }
+            ]
+        },
+        {
+            "id": "test_3",
+            "name": "Test 3",
+            "full_name": "Test 3 committee",
+            "level": "Beginner",
+            "delegates": 30,
+            "experience": "Not Required",
+            "description": "Detailed description",
+            "topics": [
+                {
+                    "title": "Topic 1",
+                    "description": "Description of topic 1..."
+                },
+                {
+                    "title": "Topic 2",
+                    "description": "Description of topic 2..."
+                }
+            ],
+            "resources": [
+                {
+                    "title": "Study Guide",
+                    "description": "Complete guide for delegates",
+                    "url": "/static/files/dicesc_study_guide.pdf"
+                },
+                {
+                    "title": "Rules & Procedures",
+                    "description": "Official rules document",
+                    "url": "/static/files/dicesc_rules.pdf"
+                }
+            ]
+        },
+        {
+            "id": "test_4",
+            "name": "Test 4",
+            "full_name": "Test 4 committee",
+            "level": "Intermediate",
+            "delegates": 25,
+            "experience": "Some Required",
+            "description": "Detailed description",
+            "topics": [
+                {
+                    "title": "Topic A",
+                    "description": "Description of topic A..."
+                },
+                {
+                    "title": "Topic B",
+                    "description": "Description of topic B..."
+                }
+            ],
+            "resources": [
+                {
+                    "title": "Guidelines",
+                    "description": "Guidelines for delegates",
+                    "url": "/static/files/com1_guidelines.pdf"
+                }
+            ]
+        }
+        
+    ]
+}
