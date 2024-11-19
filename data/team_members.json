@@ -2,39 +2,93 @@
     "team_members": [
         {
             "id": "lama_aljabr",
-            "name": "Lama Aljabr",
-            "role": "Project Manager",
-            "photo": "",
-            "bio": "Lama has over 10 years of experience in project management and leads our team with dedication and expertise.",
-            "social_links": {
-                "linkedin": "https://linkedin.com/",
-                "twitter": "https://twitter.com/"
-            }
+            "name": "Lama AlJabr",
+            "role": "Secretary General",
+            "phone_number": ""
         },
         {
-            "id": "test_1",
-            "name": "Test Member",
-            "role": "Lead Developer",
-            "photo": "",
-            "bio": "test_1 is our lead developer, specializing in backend technologies and ensuring our platforms run smoothly.",
-            "social_links": {
-                "linkedin": "https://linkedin.com/",
-                "github": "https://github.com/"
-            }
+            "id": "ahmed_rabiah",
+            "name": "Ahmed Rabiah",
+            "role": "Deputy Secretary General",
+            "phone_number": "0547937209"
         },
         {
-            "id": "test_2",
-            "name": "Test Member 2",
-            "role": "Marketing Director",
-            "photo": "",
-            "bio": "test_2 leads our marketing efforts, creating strategies that effectively promote our events and services.",
-            "social_links": {
-                "linkedin": "https://linkedin.com/",
-                "twitter": "https://twitter.com/",
-                "instagram": "https://instagram.com/"
-            }
+            "id": "norah_alhamed",
+            "name": "Norah Alhamed",
+            "role": "Head of Delegate Affairs",
+            "phone_number": "0530855434"
+        },
+        {
+            "id": "wasan_aljughaiman",
+            "name": "Wasan AlJughaiman",
+            "role": "Head of Committee Affairs",
+            "phone_number": "0502322727"
+        },
+        {
+            "id": "yazan_rabaiah",
+            "name": "Yazan Rabaiah",
+            "role": "IT Manager",
+            "phone_number": "0546393848"
+        },
+        {
+            "id": "suhaila_alkhalaf",
+            "name": "Suhaila Al Khalaf",
+            "role": "Head of Entertainment",
+            "phone_number": "0590099451"
+        },
+        {
+            "id": "ahed_nimr",
+            "name": "Ahed Nimr",
+            "role": "Deputy Head of Entertainment",
+            "phone_number": "0557326564"
+        },
+        {
+            "id": "bushra_brighesh",
+            "name": "Bushra Brighesh",
+            "role": "Head of Media",
+            "phone_number": "0570353650"
+        },
+        {
+            "id": "amnah_alalwi",
+            "name": "Amnah AlAlwi",
+            "role": "Deputy Head of Media",
+            "phone_number": "0536503327"
+        },
+        {
+            "id": "ibrahim_alsunayyin",
+            "name": "Ibrahim AlSunayyin",
+            "role": "Head of Logistics",
+            "phone_number": "0554977558"
+        },
+        {
+            "id": "shahad_alojayan",
+            "name": "Shahad AlOjayan",
+            "role": "Deputy Head of Logistics",
+            "phone_number": "0508326781"
+        },
+        {
+            "id": "abdulhadi_alabed",
+            "name": "Abdulhadi Alabed",
+            "role": "Head of Coordination",
+            "phone_number": "0544682989"
+        },
+        {
+            "id": "alzahra_wasel_alhamdan",
+            "name": "AlZahra Wasel AlHamdan",
+            "role": "Deputy Head of Coordination",
+            "phone_number": "0538408239"
+        },
+        {
+            "id": "nouf_almulhim",
+            "name": "Nouf AlMulhim",
+            "role": "Head of Design",
+            "phone_number": "0530514197"
+        },
+        {
+            "id": "mohammed_alqattan",
+            "name": "Mohammed AlQattan",
+            "role": "Deputy Head of Design",
+            "phone_number": ""
         }
-
-        
     ]
 }

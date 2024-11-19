@@ -201,61 +201,7 @@
                     </a>
                 </li>
                 
-                <!-- Contact Link -->
-                <li>
-                    <a href="{{ url_for('contact') }}" class="group flex flex-col items-center gap-3 transition-all duration-500 ease-out hover:text-[#C6943B] relative p-4
-                    {% if request.endpoint == 'contact' %}text-[#C6943B] scale-105{% else %}text-[#E6E6E6]{% endif %}
-                    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6943B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4F7B7B] rounded-xl">
-                        <!-- Animated Background Circle -->
-                        <div class="absolute inset-0 rounded-xl transition-all duration-500 ease-out 
-                            bg-gradient-to-r from-[#4F7B7B]/0 to-[#4F7B7B]/0 
-                            group-hover:from-[#C6943B]/10 group-hover:to-[#C6943B]/5
-                            group-active:from-[#C6943B]/15 group-active:to-[#C6943B]/10
-                            scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100">
-                        </div>
                 
-                        <!-- Icon Container -->
-                        <div class="relative">
-                            <!-- Outer Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/10 scale-[1.5] group-hover:scale-[1.8] -z-10
-                                {% if request.endpoint == 'contact' %} bg-gray-200/90 {% else %}{% endif %}
-                                "></div>
-                            
-                            <!-- Inner Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/5 scale-[2] group-hover:scale-[2.5] -z-20"></div>
-                            
-                            <!-- Icon -->
-                            <svg class="w-6 h-6 transition-all duration-500 ease-out transform
-                                group-hover:scale-110 group-active:scale-95
-                                group-hover:rotate-[360deg]" 
-                                stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" 
-                                    class="group-hover:stroke-dasharray-[60] group-hover:stroke-dashoffset-[60] group-hover:animate-dash"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                
-                        <!-- Text -->
-                        <span class="text-sm font-medium transition-all duration-500 ease-out
-                            group-hover:font-bold group-hover:tracking-wide
-                            relative">
-                            Contact
-                            <!-- Text Underline -->
-                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C6943B] transform scale-x-0 transition-transform duration-500 ease-out
-                                group-hover:scale-x-100 origin-center"></span>
-                        </span>
-                
-                        <!-- Decorative Dots -->
-                        <div class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-100
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                        <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-200
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                    </a>
-                </li>
                 
                 <!-- Add these animations to your CSS -->
                 <style>

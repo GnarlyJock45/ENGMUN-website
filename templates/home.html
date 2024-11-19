@@ -65,11 +65,22 @@
 
 <!-- Features Section -->
 <section class="py-16 bg-white">
-    <div class="container mx-auto px-4 animate-on-scroll delay-300 scale-fade">
-        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Our Achievements</h2>
+    <div class="container mx-auto px-4 animate-on-scroll delay-100 scale-fade">
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Why Join ENGMUN?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Feature 1 -->
             <div class="text-center p-6 animate-on-scroll delay-100 hover:transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-[#4F7B7B] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Develop Leadership Skills</h3>
+                <p class="text-[#333333]">Gain confidence and become an influential leader through debate and problem-solving experiences.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="text-center p-6 animate-on-scroll delay-300 hover:transform hover:scale-105 transition-transform duration-300">
                 <div class="bg-[#4F7B7B] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -79,17 +90,6 @@
                 <p class="text-[#333333]">Experience unique and engaging events that bring together science and engineering.</p>
             </div>
             
-            <!-- Feature 2 -->
-            <div class="text-center p-6 animate-on-scroll delay-300 hover:transform hover:scale-105 transition-transform duration-300">
-                <div class="bg-[#4F7B7B] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Expert Team</h3>
-                <p class="text-[#333333]">Our dedicated team ensures every event is executed with precision and excellence, encouraging exciting activites.</p>
-            </div>
-            
             <!-- Feature 3 -->
             <div class="text-center p-6 animate-on-scroll delay-500 hover:transform hover:scale-105 transition-transform duration-300">
                 <div class="bg-[#4F7B7B] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -97,12 +97,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Quality Assured</h3>
-                <p class="text-[#333333]">We maintain the highest standards in all our events and services.</p>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Sharpen Critical Thinking</h3>
+                <p class="text-[#333333]">Analyze complex global issues and craft innovative solutions through meaningful discussions.</p>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
@@ -268,50 +269,49 @@
 </section>
 
 <!-- Committees Section -->
-<section class="py-16 bg-[#E6E6E6]">
+<section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Our Committees</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            <!-- Committee 1 -->
-            {% for committee_id, committee in committees.items() %}                
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for committee_id, committee in committees.items() %}
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+                    <!-- Card Header -->
                     <div class="h-40 bg-[#4F7B7B] relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90 group-hover:opacity-90 transition-opacity duration-300"></div>
                         <div class="absolute bottom-4 left-4 right-4">
                             <h3 class="text-xl font-bold text-white mb-2">{{ committee.name }}</h3>
-                            <p class="text-[#E6E6E6] text-sm">Disarmament and International Security</p>
+                            <p class="text-[#E6E6E6] text-sm">{{ committee.full_name }}</p>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <p class="text-[#333333] mb-4">Focused on questions of disarmament and international security in the field of science and technology.</p>
+                    <!-- Card Content -->
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-[#333333] mb-4">{{ committee.description }}</p>
                         <div class="space-y-2">
                             <div class="flex items-center text-sm text-[#4F7B7B]">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                <span>Beginner Friendly</span>
+                                <span>{{ committee.experience }}</span>
                             </div>
                             <div class="flex items-center text-sm text-[#4F7B7B]">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                <span>30 Delegates</span>
+                                <span>{{ committee.delegates }} Delegates</span>
                             </div>
                         </div>
-                        <a href="{{ url_for('committee', committee_id=committee_id) }}" class="mt-4 inline-block text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
+                    </div>
+                    <!-- Card Footer -->
+                    <div class="p-4 bg-gray-100 text-right">
+                        <a href="{{ url_for('committee', committee_id=committee_id) }}" class="text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
                             View Guide →
                         </a>
                     </div>
                 </div>
-            {% endfor %}  
+            {% endfor %}
         </div>
     </div>
-
-
-
-
 </section>
+
 
 
 

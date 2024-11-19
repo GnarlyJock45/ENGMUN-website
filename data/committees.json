@@ -1,119 +1,128 @@
 {
     "committees": [
         {
-            "id": "test_1",
-            "name": "Test 1",
-            "full_name": "Test 1 committee",
-            "level": "Beginner",
-            "delegates": 30,
-            "experience": "Not Required",
-            "description": "Detailed description...",
+            "id": "unsc",
+            "name": "UNSC",
+            "full_name": "United Nations Security Council",
+            "level": "Advanced",
+            "delegates": 15,
+            "experience": "Required",
+            "description": "The Security Council is primarily responsible for maintaining international peace and security.",
             "topics": [
                 {
-                    "title": "Topic 1",
-                    "description": "Description of topic 1..."
+                    "title": "Cybersecurity in International Relations",
+                    "description": "Examining the role of global cooperation in addressing cyber threats and attacks."
                 },
                 {
-                    "title": "Topic 2",
-                    "description": "Description of topic 2..."
+                    "title": "Conflict in Eastern Europe",
+                    "description": "Finding diplomatic solutions to the ongoing tensions and crises in the region."
                 }
             ],
             "resources": [
                 {
                     "title": "Study Guide",
-                    "description": "Complete guide for delegates",
-                    "url": "/static/files/dicesc_study_guide.pdf"
+                    "description": "A detailed guide to the workings of the UNSC and the agenda topics.",
+                    "url": "/static/files/unsc_study_guide.pdf"
                 },
                 {
                     "title": "Rules & Procedures",
-                    "description": "Official rules document",
-                    "url": "/static/files/dicesc_rules.pdf"
+                    "description": "The official rules for participating in the Security Council.",
+                    "url": "/static/files/unsc_rules.pdf"
                 }
             ]
         },
         {
-            "id": "test_2",
-            "name": "Test 2",
-            "full_name": "Test 2 committee",
-            "level": "Intermediate",
-            "delegates": 25,
-            "experience": "Some Required",
-            "description": "Detailed description",
-            "topics": [
-                {
-                    "title": "Topic A",
-                    "description": "Description of topic A..."
-                },
-                {
-                    "title": "Topic B",
-                    "description": "Description of topic B..."
-                }
-            ],
-            "resources": [
-                {
-                    "title": "Guidelines",
-                    "description": "Guidelines for delegates",
-                    "url": "/static/files/com1_guidelines.pdf"
-                }
-            ]
-        },
-        {
-            "id": "test_3",
-            "name": "Test 3",
-            "full_name": "Test 3 committee",
+            "id": "unhcr",
+            "name": "UNHCR",
+            "full_name": "United Nations High Commissioner for Refugees",
             "level": "Beginner",
             "delegates": 30,
             "experience": "Not Required",
-            "description": "Detailed description",
+            "description": "UNHCR works to protect and support refugees and resolve refugee problems worldwide.",
             "topics": [
                 {
-                    "title": "Topic 1",
-                    "description": "Description of topic 1..."
+                    "title": "Addressing Refugee Rights in Climate Displacement",
+                    "description": "Exploring policies for protecting those displaced due to climate change."
                 },
                 {
-                    "title": "Topic 2",
-                    "description": "Description of topic 2..."
+                    "title": "Access to Education for Refugee Children",
+                    "description": "Ensuring inclusive and equitable education opportunities for displaced populations."
                 }
             ],
             "resources": [
                 {
                     "title": "Study Guide",
-                    "description": "Complete guide for delegates",
-                    "url": "/static/files/dicesc_study_guide.pdf"
+                    "description": "A comprehensive guide for understanding the agenda and mandate of UNHCR.",
+                    "url": "/static/files/unhcr_study_guide.pdf"
                 },
                 {
                     "title": "Rules & Procedures",
-                    "description": "Official rules document",
-                    "url": "/static/files/dicesc_rules.pdf"
+                    "description": "The official guide for participating in the UNHCR committee.",
+                    "url": "/static/files/unhcr_rules.pdf"
                 }
             ]
         },
         {
-            "id": "test_4",
-            "name": "Test 4",
-            "full_name": "Test 4 committee",
+            "id": "who",
+            "name": "WHO",
+            "full_name": "World Health Organization",
             "level": "Intermediate",
             "delegates": 25,
             "experience": "Some Required",
-            "description": "Detailed description",
+            "description": "WHO is responsible for international public health and coordinating responses to global health crises.",
             "topics": [
                 {
-                    "title": "Topic A",
-                    "description": "Description of topic A..."
+                    "title": "Global Vaccine Distribution",
+                    "description": "Addressing inequalities in vaccine access and strategies for equitable distribution."
                 },
                 {
-                    "title": "Topic B",
-                    "description": "Description of topic B..."
+                    "title": "Mental Health in Post-Pandemic Recovery",
+                    "description": "Promoting mental health policies and initiatives in the wake of global crises."
                 }
             ],
             "resources": [
                 {
-                    "title": "Guidelines",
-                    "description": "Guidelines for delegates",
-                    "url": "/static/files/com1_guidelines.pdf"
+                    "title": "Study Guide",
+                    "description": "A detailed guide for understanding WHO's operations and current agenda topics.",
+                    "url": "/static/files/who_study_guide.pdf"
+                },
+                {
+                    "title": "Rules & Procedures",
+                    "description": "The official guide for participating in WHO sessions.",
+                    "url": "/static/files/who_rules.pdf"
+                }
+            ]
+        },
+        {
+            "id": "unesco",
+            "name": "UNESCO",
+            "full_name": "United Nations Educational, Scientific and Cultural Organization",
+            "level": "Beginner",
+            "delegates": 30,
+            "experience": "Not Required",
+            "description": "UNESCO aims to build peace through international cooperation in education, science, and culture.",
+            "topics": [
+                {
+                    "title": "Safeguarding Cultural Heritage in Conflict Zones",
+                    "description": "Strategies for protecting historical and cultural landmarks during conflicts."
+                },
+                {
+                    "title": "Promoting Inclusive Education Globally",
+                    "description": "Ensuring equal access to education for marginalized communities worldwide."
+                }
+            ],
+            "resources": [
+                {
+                    "title": "Study Guide",
+                    "description": "A resource detailing UNESCO's mandate and the agenda topics.",
+                    "url": "/static/files/unesco_study_guide.pdf"
+                },
+                {
+                    "title": "Rules & Procedures",
+                    "description": "The official rules for participating in UNESCO sessions.",
+                    "url": "/static/files/unesco_rules.pdf"
                 }
             ]
         }
-        
     ]
 }

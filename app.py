@@ -1,10 +1,24 @@
-# app.py
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request
+from flask_babel import Babel, gettext as _
+
 import json
 import os
 
 app = Flask(__name__)
 
+# Configure Babel
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_SUPPORTED_LOCALES'] = ['en', 'ar']
+app.config['BABEL_DEFAULT_TIMEZONE'] = 'UTC'
+
+babel = Babel()
+
+# Locale selector function
+def locale_selector():
+    return request.args.get('lang', 'en')
+
+# Initialize Babel with the app and selector
+babel.init_app(app, locale_selector=locale_selector)
 
 # Load committee data once when the app starts
 def load_committees():
@@ -36,48 +50,19 @@ team_members = load_team_members()
 
 @app.route('/')
 def home():
-    return render_template('home.html', title='Home', committees=committees)
+    return render_template('home.html', title=_('Home'), committees=committees)
 
 @app.route('/concert')
 def concert():
-    return render_template('concert.html', title='Concert Details')
+    return render_template('concert.html', title=_('Concert Details'))
 
 @app.route('/team')
 def team():
-    return render_template('team.html', title='Our Team', team_members=team_members)
+    return render_template('team.html', title=_('Our Team'), team_members=team_members)
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html', title='Contact Us')
-
-
-# @app.route('/committee/<committee_id>')
-# def committee(committee_id):
-#     # Fetch committee data based on committee_id
-#     committee_data = {
-#         'name': 'DISEC',
-#         'full_name': 'Disarmament and International Security',
-#         'level': 'Beginner',
-#         'delegates': 30,
-#         'experience': 'Not Required',
-#         'description': 'Detailed description...',
-#         'topics': [
-#             {
-#                 'title': 'Topic 1',
-#                 'description': 'Description of topic 1...'
-#             },
-#             # More topics...
-#         ],
-#         'resources': [
-#             {
-#                 'title': 'Study Guide',
-#                 'description': 'Complete guide for delegates',
-#                 'url': '#'
-#             },
-#             # More resources...
-#         ]
-#     }
-#     return render_template('committee.html', committee=committee_data)
+    return render_template('contact.html', title=_('Contact Us'))
 
 @app.route('/committee/<committee_id>')
 def committee(committee_id):
@@ -88,4 +73,4 @@ def committee(committee_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True,port=5001)
+    app.run(debug=True, port=5001)
