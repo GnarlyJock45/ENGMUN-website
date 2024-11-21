@@ -21,7 +21,7 @@ msgstr ""
 
 #: app.py:53 templates/base.html:67
 msgid "Home"
-msgstr "الصفحة الرئيسية"
+msgstr "الرئيسية"
 
 #: app.py:57
 msgid "Event Details"
