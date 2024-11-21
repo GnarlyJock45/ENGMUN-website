@@ -9,9 +9,8 @@
             autoplay
             muted
             loop
-            playsinline
-            poster="{{ url_for('static', filename='images/main_logo.png') }}">
-            <source src="{{ url_for('static', filename='videos/test_video.mp4') }}" type="video/mp4">
+            playsinline>
+            <source src="{{ url_for('static', filename='videos/test_video1.mp4') }}" type="video/mp4">
         </video>
         <!-- Overlay with gradient -->
         <div class="absolute inset-0 bg-gradient-to-r from-[#4F7B7B]/60 to-[#3D5F5F]/60 backdrop-blur-[1px] animate-on-scroll fade-only"></div>
@@ -23,14 +22,14 @@
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.2em] animate-on-scroll">
             
             {% if current_lang == 'en' %}
-                <span class="inline-block">{{ _('FOR') }}</span>
-                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('SCIENCE') }}</span>
-                <span class="inline-block mt-2 md:mt-4">{{ _('AND') }}</span>
-                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('ENGINEERING') }}</span>
+                <span class="font-bold inline-block">{{ _('FOR') }}</span>
+                <span class="font-bold block mt-2 md:mt-4 text-[#C6943B]">{{ _('SCIENCE') }}</span>
+                <span class="font-bold inline-block mt-2 md:mt-4">{{ _('AND') }}</span>
+                <span class="font-bold block mt-2 md:mt-4 text-[#C6943B]">{{ _('ENGINEERING') }}</span>
             {% elif current_lang == 'ar' %}
-                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('SCIENCE') }}</span>
-                <span class="inline-block mt-2 md:mt-4">{{ _('AND') }}</span>
-                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('ENGINEERING') }}</span>
+                <span class="font-bold block mt-2 md:mt-4 text-[#C6943B]">{{ _('SCIENCE') }}</span>
+                <span class="font-bold inline-block mt-2 md:mt-4">{{ _('AND') }}</span>
+                <span class="font-bold block mt-2 md:mt-4 text-[#C6943B]">{{ _('ENGINEERING') }}</span>
             {% endif %}
         </h1>
 
@@ -70,10 +69,148 @@
         h1 span:nth-child(4) { animation-delay: 1200ms; }
     </style>
 
+
+<section class="relative py-24 overflow-hidden bg-gradient-to-br from-[#2A4B55] to-[#1D353C]">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0">
+        <!-- Geometric Shapes -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#C6943B]/20 to-transparent rounded-full blur-3xl transform-gpu animate-float"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#C6943B]/20 to-transparent rounded-full blur-3xl transform-gpu animate-float-delayed"></div>
+        
+        <!-- Decorative Lines -->
+        <div class="absolute top-20 left-10 w-32 h-1 bg-gradient-to-r from-transparent via-[#C6943B]/30 to-transparent transform -rotate-45"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-1 bg-gradient-to-r from-transparent via-[#C6943B]/30 to-transparent transform rotate-45"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative">
+        <!-- Vision Card -->
+        <div class="max-w-3xl mx-auto opacity-0 animate-fade-in-up">
+            <!-- Section Title -->
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#C6943B] inline-block relative" dir="rtl">
+                    {{ _('Our Vision') }}
+                    <div class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#C6943B]/0 via-[#C6943B] to-[#C6943B]/0"></div>
+                </h2>
+            </div>
+
+            <!-- Vision Content Card -->
+            <div class="relative">
+                <!-- Background Card -->
+                <div class="relative bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-10 overflow-hidden border border-[#C6943B]/20
+                           shadow-lg shadow-black/5 transform transition-all duration-500 hover:scale-[1.02] hover:bg-white/10">
+                    
+                    <!-- Icon -->
+                    <div class="flex justify-center mb-8">
+                        <div class="w-16 h-16 rounded-full bg-[#C6943B]/10 flex items-center justify-center
+                                  transform transition-all duration-500 group-hover:scale-110 relative">
+                            <!-- Animated rings -->
+                            <div class="absolute inset-0 rounded-full border-2 border-[#C6943B]/20 animate-ping-slow"></div>
+                            <div class="absolute inset-0 rounded-full border border-[#C6943B]/10 animate-ping-slow-delayed"></div>
+                            <svg class="w-8 h-8 text-[#C6943B]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Vision Text -->
+                    <p class="text-white/90 leading-relaxed text-lg md:text-xl text-center mb-8" dir="rtl">
+                        {{ _('Leading in developing a generation of engineers capable of facing global challenges through innovation and international cooperation.') }}
+                    </p>
+
+                    <!-- Decorative Elements -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C6943B] to-transparent"></div>
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-[#C6943B]/30 to-transparent"></div>
+                    <div class="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-[#C6943B]/30 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(10px, -10px) scale(1.05); }
+}
+
+@keyframes float-delayed {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-10px, 10px) scale(1.05); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ping-slow {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+@keyframes ping-slow-delayed {
+    0% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+.animate-float {
+    animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-ping-slow {
+    animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-ping-slow-delayed {
+    animation: ping-slow-delayed 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+    animation-delay: 1.5s;
+}
+</style>
+
+
+
 <!-- Features Section -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4 animate-on-scroll delay-100 scale-fade">
-        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12" >{{ _('Why Join ENGMUN?') }}</h2>
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-4" >{{ _('Why EngMUN?') }}</h2>
+        <p class="text-lg text-center text-gray-500 mb-12">{{ _('First in Region')}}</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Feature 1 -->
             <div class="text-center p-6 animate-on-scroll delay-100 hover:transform hover:scale-105 transition-transform duration-300">
@@ -82,8 +219,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('Develop Leadership Skills') }}</h3>
-                <p class="text-[#333333]">{{ _('Gain confidence and become an influential leader through debate and problem-solving experiences.') }}</p>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('Build a Professional Network') }}</h3>
+                <p class="text-[#333333]">{{ _('Network with future leaders to expand your career horizons') }}</p>
             </div>
             
             <!-- Feature 2 -->
@@ -93,8 +230,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('First Ever in KFU') }}</h3>
-                <p class="text-[#333333]">{{ _('Experience unique and engaging events that bring together science and engineering.') }}</p>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('Enhance Diplomacy') }}</h3>
+                <p class="text-[#333333]">{{ _('Develop your abilities in negotiation, debating, and problem-solving') }}</p>
             </div>
             
             <!-- Feature 3 -->
@@ -104,8 +241,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('Sharpen Critical Thinking') }}</h3>
-                <p class="text-[#333333]">{{ _('Analyze complex global issues and craft innovative solutions through meaningful discussions.') }}</p>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('Innovative Problem Solving') }}</h3>
+                <p class="text-[#333333]">{{ _('Contribute creative solutions to real global challenges') }}</p>
             </div>
         </div>
     </div>
@@ -127,11 +264,11 @@
             <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">{{ _('A Message from the Executive Team') }}</h2>
             <div class="space-y-6 text-[#E6E6E6]">
                 <p class="text-lg leading-relaxed">
-                    {{ _('“Welcome to ENGMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”') }}
+                    {{ _('“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”') }}
                 </p>
                 <div class="flex flex-col items-center mt-8 space-y-4">
                     <div class="w-20 h-1 bg-[#C6943B]"></div>
-                    <p class="text-[#C6943B] font-semibold">{{ _('The ENGMUN Team') }}</p>
+                    <p class="text-[#C6943B] font-semibold">{{ _('The EngMUN Team') }}</p>
                 </div>
             </div>
         </div>
@@ -174,7 +311,7 @@
             
             <!-- Description -->
             <p class="mx-auto max-w-2xl text-lg text-gray-600 leading-relaxed">
-                {{ _('Our dedicated team works tirelessly to ensure the success of the ENGMUN events, showcasing passion and expertise in every aspect.') }}
+                {{ _('Our dedicated team works tirelessly to ensure the success of the EngMUN events, showcasing passion and expertise in every aspect.') }}
             </p>
         </div>
     
@@ -230,7 +367,7 @@
 <!-- Downloadable Files Section -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4 animate-on-scroll delay-300 ">
-        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">{{ _('Essential Resources') }}</h2>
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">{{ _('Resources you need') }}</h2>
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <!-- Study Guide Download Card -->
             <div class="group relative bg-[#4F7B7B] rounded-2xl p-6 transform hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl">
@@ -281,6 +418,8 @@
 <!-- Committees Section -->
 <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">{{ _('Committees') }}</h2>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {% for committee_id, committee in committees.items() %}
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">

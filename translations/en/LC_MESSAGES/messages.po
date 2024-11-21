@@ -27,8 +27,8 @@ msgid "Event Details"
 msgstr "Event Details"
 
 #: app.py:79
-msgid "Our Team"
-msgstr "Our Team"
+msgid "Executive Team"
+msgstr "Executive Team"
 
 #: app.py:89
 msgid "Committee"
@@ -41,6 +41,10 @@ msgstr "Events"
 #: templates/base.html:205
 msgid "Team"
 msgstr "Team"
+
+#: templates/base.html:188
+msgid "Committees"
+msgstr "Committees"
 
 #: templates/committee.html:37
 msgid "Level"
@@ -90,45 +94,58 @@ msgstr "AND"
 msgid "ENGINEERING"
 msgstr "ENGINEERING"
 
+#: templates/home.html:120
+msgid "Our Vision"
+msgstr "Our Vision"
+
+#: templates/home.html:91
+msgid "Leading in developing a generation of engineers capable of facing global challenges through innovation and international cooperation."
+msgstr "Leading in developing a generation of engineers capable of facing global challenges through innovation and international cooperation"
+
+
 #: templates/home.html:69
-msgid "Why Join ENGMUN?"
-msgstr "Why Join ENGMUN?"
+msgid "Why EngMUN?"
+msgstr "Why EngMUN?"
 
 #: templates/home.html:78
-msgid "Develop Leadership Skills"
-msgstr "Develop Leadership Skills"
+msgid "Build a Professional Network"
+msgstr "Build a Professional Network"
 
 #: templates/home.html:79
-msgid "Gain confidence and become an influential leader through debate and problem-solving experiences."
-msgstr "Gain confidence and become an influential leader through debate and problem-solving experiences."
+msgid "Network with future leaders to expand your career horizons"
+msgstr "Network with future leaders to expand your career horizons"
 
 #: templates/home.html:89
-msgid "First Ever in KFU"
-msgstr "First Ever in KFU"
+msgid "Enhance Diplomacy"
+msgstr "Enhance Diplomacy"
 
 #: templates/home.html:90
-msgid "Experience unique and engaging events that bring together science and engineering."
-msgstr "Experience unique and engaging events that bring together science and engineering."
+msgid "Develop your abilities in negotiation, debating, and problem-solving"
+msgstr "Develop your abilities in negotiation, debating, and problem-solving"
 
 #: templates/home.html:100
-msgid "Sharpen Critical Thinking"
-msgstr "Sharpen Critical Thinking"
+msgid "Innovative Problem Solving"
+msgstr "Innovative Problem Solving"
 
 #: templates/home.html:101
-msgid "Analyze complex global issues and craft innovative solutions through meaningful discussions."
-msgstr "Analyze complex global issues and craft innovative solutions through meaningful discussions."
+msgid "Contribute creative solutions to real global challenges"
+msgstr "Contribute creative solutions to real global challenges"
+
+#: templates/home.html:163
+msgid "First in Region"
+msgstr "First conference of its kind in the region!"
 
 #: templates/home.html:120
 msgid "A Message from the Executive Team"
 msgstr "A Message from the Executive Team"
 
 #: templates/home.html:123
-msgid "“Welcome to ENGMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
-msgstr "“Welcome to ENGMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
+msgid "“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
+msgstr "“Organizing a conference that combines Model United Nations simulations and engineering, enabling students to develop their skills in addressing global challenges with a sustainable engineering perspective”"
 
 #: templates/home.html:127
-msgid "The ENGMUN Team"
-msgstr "The ENGMUN Team"
+msgid "The EngMUN Team"
+msgstr "The EngMUN Team"
 
 
 
@@ -138,9 +155,9 @@ msgstr "Meet the Executive Team"
 
 #: templates/home.html:170
 msgid ""
-"Our dedicated team works tirelessly to ensure the success of the ENGMUN "
+"Our dedicated team works tirelessly to ensure the success of the EngMUN "
 "events, showcasing passion and expertise in every aspect."
-msgstr "Our dedicated team works tirelessly to ensure the success of the ENGMUN events, showcasing passion and expertise in every aspect."
+msgstr "Our dedicated team works tirelessly to ensure the success of the EngMUN events, showcasing passion and expertise in every aspect."
 
 
 #: templates/home.html:184
@@ -150,8 +167,8 @@ msgstr "View Team"
 
 
 #: templates/home.html:226
-msgid "Essential Resources"
-msgstr "Essential Resources"
+msgid "Resources you need"
+msgstr "Resources you need"
 
 #: templates/home.html:237
 msgid "Delegate Guide"

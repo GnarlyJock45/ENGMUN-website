@@ -27,6 +27,12 @@ babel.init_app(app, locale_selector=locale_selector)
 def inject_lang():
     return {'current_lang': locale_selector()}
 
+@app.context_processor
+def inject_committees():
+    committees = load_committees()
+    return dict(committees=committees)
+
+
 # Load committee data once when the app starts
 def load_committees():
     lang = locale_selector()
@@ -69,7 +75,7 @@ def load_team_members():
 @app.route('/')
 def home():
     committees = load_committees()
-    return render_template('home.html', title=_('Home'), committees=committees)
+    return render_template('home.html', title=_('Home'))
 
 @app.route('/concert')
 def concert():
@@ -99,4 +105,4 @@ def ensure_lang_in_url():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)

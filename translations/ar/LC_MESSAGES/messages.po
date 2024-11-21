@@ -28,8 +28,8 @@ msgid "Event Details"
 msgstr "تفاصيل الحدث"
 
 #: app.py:61
-msgid "Our Team"
-msgstr "فريقنا"
+msgid "Executive Team"
+msgstr "الفريق التنفيذي"
 
 #: app.py:89
 msgid "Committee"
@@ -42,6 +42,10 @@ msgstr "الأحداث"
 #: templates/base.html:188
 msgid "Team"
 msgstr "الفريق"
+
+#: templates/base.html:188
+msgid "Committees"
+msgstr "اللجان"
 
 #: templates/committee.html:37
 msgid "Level"
@@ -91,45 +95,57 @@ msgstr "و"
 msgid "ENGINEERING"
 msgstr "الهندسة"
 
+#: templates/home.html:120
+msgid "Our Vision"
+msgstr "رؤيتنا"
+
+#: templates/home.html:91
+msgid "Leading in developing a generation of engineers capable of facing global challenges through innovation and international cooperation."
+msgstr "الريادة في تطوير جيل من المهندسين القادرين على مواجهة التحديات العالمية من خلال الابتكار والتعاون الدولي."
+
 #: templates/home.html:69
-msgid "Why Join ENGMUN?"
-msgstr "لماذا تنضم إلى ENGMUN؟"
+msgid "Why EngMUN?"
+msgstr "لماذا EngMUN؟"
 
 #: templates/home.html:78
-msgid "Develop Leadership Skills"
-msgstr "تطوير مهارات القيادة"
+msgid "Build a Professional Network"
+msgstr "بناء شبكة علاقات مهنية"
 
 #: templates/home.html:79
-msgid "Gain confidence and become an influential leader through debate and problem-solving experiences."
-msgstr "اكتسب الثقة وكن قائداً مؤثراً من خلال تجارب النقاش وحل المشكلات."
+msgid "Network with future leaders to expand your career horizons"
+msgstr "تواصل مع قادة المستقبل لتوسيع آفاقك المهنية"
 
 #: templates/home.html:89
-msgid "First Ever in KFU"
-msgstr "الأول من نوعه في جامعة الملك فيصل"
+msgid "Enhance Diplomacy"
+msgstr "تعزيز مهارات الدبلوماسية والقيادة"
 
 #: templates/home.html:90
-msgid "Experience unique and engaging events that bring together science and engineering."
-msgstr "اختبر فعاليات فريدة وجذابة تجمع بين العلوم والهندسة."
+msgid "Develop your abilities in negotiation, debating, and problem-solving"
+msgstr "طوّر مهاراتك في التفاوض، النقاش، وحل المشكلات"
 
 #: templates/home.html:100
-msgid "Sharpen Critical Thinking"
-msgstr "شحذ التفكير النقدي"
+msgid "Innovative Problem Solving"
+msgstr "إيجاد حلول مبتكرة"
 
 #: templates/home.html:101
-msgid "Analyze complex global issues and craft innovative solutions through meaningful discussions."
-msgstr "حلل القضايا العالمية المعقدة وابتكر حلولاً مبتكرة من خلال مناقشات هادفة."
+msgid "Contribute creative solutions to real global challenges"
+msgstr "ساهم في طرح حلول خلاقة لتحديات عالمية حقيقية"
+
+#: templates/home.html:163
+msgid "First in Region"
+msgstr "أول مؤتمر من نوعه في المنطقة!"
 
 #: templates/home.html:120
 msgid "A Message from the Executive Team"
 msgstr "رسالة من الفريق التنفيذي"
 
 #: templates/home.html:123
-msgid "“Welcome to ENGMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
-msgstr "“مرحبًا بكم في ENGMUN للعلوم والهندسة! رؤيتنا هي خلق مجتمع يمتلك القدرات للمشاركة في حجج منظمة وجذابة في مجالات الهندسة والعلوم.”"
+msgid "“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
+msgstr "“تنظيم مؤتمر يجمع بين محاكاة الأمم المتحدة والهندسة، لتمكين الطلاب من تطوير مهاراتهم في حل المشكلات العالمية بنظرة هندسية مستدامة.”"
 
 #: templates/home.html:127
-msgid "The ENGMUN Team"
-msgstr "فريق ENGMUN"
+msgid "The EngMUN Team"
+msgstr "فريق EngMUN"
 
 
 
@@ -138,8 +154,8 @@ msgid "Meet the Executive Team"
 msgstr "تعرف على الفريق التنفيذي"
 
 #: templates/home.html:170
-msgid "Our dedicated team works tirelessly to ensure the success of the ENGMUN events, showcasing passion and expertise in every aspect."
-msgstr "يعمل فريقنا المكرس بلا كلل لضمان نجاح فعاليات ENGMUN، معروضًا الشغف والخبرة في كل جانب."
+msgid "Our dedicated team works tirelessly to ensure the success of the EngMUN events, showcasing passion and expertise in every aspect."
+msgstr "يعمل فريقنا المكرس بلا كلل لضمان نجاح فعاليات EngMUN، معروضًا الشغف والخبرة في كل جانب."
 
 #: templates/home.html:184
 msgid "View Team"
@@ -147,8 +163,8 @@ msgstr "عرض الفريق"
 
 
 #: templates/home.html:226
-msgid "Essential Resources"
-msgstr "الموارد الأساسية"
+msgid "Resources you need"
+msgstr "مصادر تهمك"
 
 #: templates/home.html:237
 msgid "Delegate Guide"
