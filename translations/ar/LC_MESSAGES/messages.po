@@ -164,7 +164,7 @@ msgstr "تحميل الملف"
 
 #: templates/home.html:257
 msgid "Chair Guide"
-msgstr "دليل دليل قائد اللجنة"
+msgstr " دليل قائد اللجنة"
 
 #: templates/home.html:258
 msgid "Detailed guidelines for participation as a Chair."
