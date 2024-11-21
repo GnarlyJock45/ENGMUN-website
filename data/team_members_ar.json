@@ -1,0 +1,94 @@
+{
+    "team_members": [
+        {
+            "id": "lama_aljabr",
+            "name": "Lama AlJabr",
+            "role": "الأمين العام",
+            "phone_number": ""
+        },
+        {
+            "id": "ahmed_rabiah",
+            "name": "Ahmed Rabiah",
+            "role": "نائب الأمين العام",
+            "phone_number": "0547937209"
+        },
+        {
+            "id": "norah_alhamed",
+            "name": "Norah Alhamed",
+            "role": "رئيس شؤون المندوبين",
+            "phone_number": "0530855434"
+        },
+        {
+            "id": "wasan_aljughaiman",
+            "name": "Wasan AlJughaiman",
+            "role": "رئيس شؤون اللجنة",
+            "phone_number": "0502322727"
+        },
+        {
+            "id": "yazan_rabaiah",
+            "name": "Yazan Rabaiah",
+            "role": "مدير تكنولوجيا المعلومات",
+            "phone_number": "0546393848"
+        },
+        {
+            "id": "suhaila_alkhalaf",
+            "name": "Suhaila Al Khalaf",
+            "role": "رئيس الترفيه",
+            "phone_number": "0590099451"
+        },
+        {
+            "id": "ahed_nimr",
+            "name": "Ahed Nimr",
+            "role": "نائب رئيس الترفيه",
+            "phone_number": "0557326564"
+        },
+        {
+            "id": "bushra_brighesh",
+            "name": "Bushra Brighesh",
+            "role": "رئيس الإعلام",
+            "phone_number": "0570353650"
+        },
+        {
+            "id": "amnah_alalwi",
+            "name": "Amnah AlAlwi",
+            "role": "نائب رئيس الإعلام",
+            "phone_number": "0536503327"
+        },
+        {
+            "id": "ibrahim_alsunayyin",
+            "name": "Ibrahim AlSunayyin",
+            "role": "رئيس اللوجستيات",
+            "phone_number": "0554977558"
+        },
+        {
+            "id": "shahad_alojayan",
+            "name": "Shahad AlOjayan",
+            "role": "نائب رئيس اللوجستيات",
+            "phone_number": "0508326781"
+        },
+        {
+            "id": "abdulhadi_alabed",
+            "name": "Abdulhadi Alabed",
+            "role": "رئيس التنسيق",
+            "phone_number": "0544682989"
+        },
+        {
+            "id": "alzahra_wasel_alhamdan",
+            "name": "AlZahra Wasel AlHamdan",
+            "role": "نائب رئيس التنسيق",
+            "phone_number": "0538408239"
+        },
+        {
+            "id": "nouf_almulhim",
+            "name": "Nouf AlMulhim",
+            "role": "رئيس التصميم",
+            "phone_number": "0530514197"
+        },
+        {
+            "id": "mohammed_alqattan",
+            "name": "Mohammed AlQattan",
+            "role": "نائب رئيس التصميم",
+            "phone_number": ""
+        }
+    ]
+}

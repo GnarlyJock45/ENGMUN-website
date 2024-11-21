@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-19 21:30+0300\n"
-"PO-Revision-Date: 2024-11-19 21:31+0300\n"
+"POT-Creation-Date: 2024-11-21 18:22+0300\n"
+"PO-Revision-Date: 2024-11-21 18:25+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ar\n"
 "Language-Team: ar <LL@li.org>\n"
@@ -19,19 +19,158 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: app.py:51
+#: app.py:53 templates/base.html:67
 msgid "Home"
-msgstr ""
+msgstr "الصفحة الرئيسية"
 
-#: app.py:55
-msgid "Concert Details"
-msgstr ""
+#: app.py:57
+msgid "Event Details"
+msgstr "تفاصيل الحدث"
 
-#: app.py:59
+#: app.py:61
 msgid "Our Team"
-msgstr ""
+msgstr "فريقنا"
 
-#: app.py:63
-msgid "Contact Us"
-msgstr ""
+#: app.py:89
+msgid "Committee"
+msgstr "اللجنة"
+
+#: templates/base.html:134
+msgid "Events"
+msgstr "الأحداث"
+
+#: templates/base.html:188
+msgid "Team"
+msgstr "الفريق"
+
+#: templates/committee.html:37
+msgid "Level"
+msgstr "المستوى"
+
+#: templates/committee.html:46 templates/home.html:309
+msgid "Delegates"
+msgstr "ممثلين الدول"
+
+#: templates/committee.html:55
+msgid "Experience"
+msgstr "الخبرة"
+
+#: templates/committee.html:64
+msgid "Study Guide"
+msgstr "دليل الدراسة"
+
+#: templates/committee.html:65
+msgid "Download"
+msgstr "تحميل"
+
+#: templates/committee.html:73
+msgid "About the Committee"
+msgstr "حول اللجنة"
+
+#: templates/committee.html:81
+msgid "Topics"
+msgstr "المواضيع"
+
+#: templates/committee.html:94
+msgid "Resources"
+msgstr "الموارد"
+
+#: templates/home.html:24
+msgid "FOR"
+msgstr "لـ"
+
+#: templates/home.html:25
+msgid "SCIENCE"
+msgstr "للعلوم"
+
+#: templates/home.html:26
+msgid "AND"
+msgstr "و"
+
+#: templates/home.html:27
+msgid "ENGINEERING"
+msgstr "الهندسة"
+
+#: templates/home.html:69
+msgid "Why Join ENGMUN?"
+msgstr "لماذا تنضم إلى ENGMUN؟"
+
+#: templates/home.html:78
+msgid "Develop Leadership Skills"
+msgstr "تطوير مهارات القيادة"
+
+#: templates/home.html:79
+msgid "Gain confidence and become an influential leader through debate and problem-solving experiences."
+msgstr "اكتسب الثقة وكن قائداً مؤثراً من خلال تجارب النقاش وحل المشكلات."
+
+#: templates/home.html:89
+msgid "First Ever in KFU"
+msgstr "الأول من نوعه في جامعة الملك فيصل"
+
+#: templates/home.html:90
+msgid "Experience unique and engaging events that bring together science and engineering."
+msgstr "اختبر فعاليات فريدة وجذابة تجمع بين العلوم والهندسة."
+
+#: templates/home.html:100
+msgid "Sharpen Critical Thinking"
+msgstr "شحذ التفكير النقدي"
+
+#: templates/home.html:101
+msgid "Analyze complex global issues and craft innovative solutions through meaningful discussions."
+msgstr "حلل القضايا العالمية المعقدة وابتكر حلولاً مبتكرة من خلال مناقشات هادفة."
+
+#: templates/home.html:120
+msgid "A Message from the Executive Team"
+msgstr "رسالة من الفريق التنفيذي"
+
+#: templates/home.html:123
+msgid "“Welcome to ENGMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
+msgstr "“مرحبًا بكم في ENGMUN للعلوم والهندسة! رؤيتنا هي خلق مجتمع يمتلك القدرات للمشاركة في حجج منظمة وجذابة في مجالات الهندسة والعلوم.”"
+
+#: templates/home.html:127
+msgid "The ENGMUN Team"
+msgstr "فريق ENGMUN"
+
+
+
+#: templates/home.html:164
+msgid "Meet the Executive Team"
+msgstr "تعرف على الفريق التنفيذي"
+
+#: templates/home.html:170
+msgid "Our dedicated team works tirelessly to ensure the success of the ENGMUN events, showcasing passion and expertise in every aspect."
+msgstr "يعمل فريقنا المكرس بلا كلل لضمان نجاح فعاليات ENGMUN، معروضًا الشغف والخبرة في كل جانب."
+
+#: templates/home.html:184
+msgid "View Team"
+msgstr "عرض الفريق"
+
+
+#: templates/home.html:226
+msgid "Essential Resources"
+msgstr "الموارد الأساسية"
+
+#: templates/home.html:237
+msgid "Delegate Guide"
+msgstr "دليل ممثلين الدول"
+
+#: templates/home.html:238
+msgid "Detailed guidelines for participation as a Delegate."
+msgstr "إرشادات مفصلة للمشاركة كممثل دولة."
+
+#: templates/home.html:240 templates/home.html:260
+msgid "Download PDF"
+msgstr "تحميل الملف"
+
+#: templates/home.html:257
+msgid "Chair Guide"
+msgstr "دليل دليل قائد اللجنة"
+
+#: templates/home.html:258
+msgid "Detailed guidelines for participation as a Chair."
+msgstr "إرشادات مفصلة للمشاركة كقائد لجنة."
+
+#: templates/home.html:316
+msgid "View Guide"
+msgstr "اقرأ المزيد"
 

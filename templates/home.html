@@ -21,10 +21,17 @@
     <div class="relative text-center">
         <!-- Main Tagline -->
         <h1 class="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.2em] animate-on-scroll">
-            <span class="inline-block">FOR</span>
-            <span class="block mt-2 md:mt-4 text-[#C6943B]">SCIENCE</span>
-            <span class="inline-block mt-2 md:mt-4">AND</span>
-            <span class="block mt-2 md:mt-4 text-[#C6943B]">ENGINEERING</span>
+            
+            {% if current_lang == 'en' %}
+                <span class="inline-block">{{ _('FOR') }}</span>
+                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('SCIENCE') }}</span>
+                <span class="inline-block mt-2 md:mt-4">{{ _('AND') }}</span>
+                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('ENGINEERING') }}</span>
+            {% elif current_lang == 'ar' %}
+                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('SCIENCE') }}</span>
+                <span class="inline-block mt-2 md:mt-4">{{ _('AND') }}</span>
+                <span class="block mt-2 md:mt-4 text-[#C6943B]">{{ _('ENGINEERING') }}</span>
+            {% endif %}
         </h1>
 
         <!-- Scroll Indicator -->
@@ -66,7 +73,7 @@
 <!-- Features Section -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4 animate-on-scroll delay-100 scale-fade">
-        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Why Join ENGMUN?</h2>
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12" >{{ _('Why Join ENGMUN?') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Feature 1 -->
             <div class="text-center p-6 animate-on-scroll delay-100 hover:transform hover:scale-105 transition-transform duration-300">
@@ -75,8 +82,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Develop Leadership Skills</h3>
-                <p class="text-[#333333]">Gain confidence and become an influential leader through debate and problem-solving experiences.</p>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('Develop Leadership Skills') }}</h3>
+                <p class="text-[#333333]">{{ _('Gain confidence and become an influential leader through debate and problem-solving experiences.') }}</p>
             </div>
             
             <!-- Feature 2 -->
@@ -86,8 +93,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">First Ever in KFU</h3>
-                <p class="text-[#333333]">Experience unique and engaging events that bring together science and engineering.</p>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('First Ever in KFU') }}</h3>
+                <p class="text-[#333333]">{{ _('Experience unique and engaging events that bring together science and engineering.') }}</p>
             </div>
             
             <!-- Feature 3 -->
@@ -97,13 +104,12 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">Sharpen Critical Thinking</h3>
-                <p class="text-[#333333]">Analyze complex global issues and craft innovative solutions through meaningful discussions.</p>
+                <h3 class="text-xl font-semibold mb-3 text-[#4F7B7B]">{{ _('Sharpen Critical Thinking') }}</h3>
+                <p class="text-[#333333]">{{ _('Analyze complex global issues and craft innovative solutions through meaningful discussions.') }}</p>
             </div>
         </div>
     </div>
 </section>
-
 
 
 
@@ -118,13 +124,14 @@
     
     <div class="container mx-auto px-4 relative">
         <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
-            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">A Message from the Executive Team</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">{{ _('A Message from the Executive Team') }}</h2>
             <div class="space-y-6 text-[#E6E6E6]">
                 <p class="text-lg leading-relaxed">
-                    "Welcome to ENGMUN for Science and Engineering! Our vision is to create a community that has the capabilites to engage in well organized and compelling arguements in the fields of Engineering and Sciences</p>
+                    {{ _('“Welcome to ENGMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”') }}
+                </p>
                 <div class="flex flex-col items-center mt-8 space-y-4">
                     <div class="w-20 h-1 bg-[#C6943B]"></div>
-                    <p class="text-[#C6943B] font-semibold">The ENGMUN Team</p>
+                    <p class="text-[#C6943B] font-semibold">{{ _('The ENGMUN Team') }}</p>
                 </div>
             </div>
         </div>
@@ -161,28 +168,27 @@
         <div class="mb-16 space-y-4">
             <!-- Title with Underline -->
             <h2 class="relative inline-block text-4xl font-bold text-gray-800 mx-auto">
-                Meet the Executive Team
+                {{ _('Meet the Executive Team') }}
                 <div class="absolute -bottom-2 left-0 h-1 w-full rounded-full bg-gradient-to-r from-[#C6943B]/30 via-[#C6943B]/60 to-[#C6943B]/30"></div>
             </h2>
             
             <!-- Description -->
             <p class="mx-auto max-w-2xl text-lg text-gray-600 leading-relaxed">
-                Our dedicated team works tirelessly to ensure the success of the ENGMUN events,
-                showcasing passion and expertise in every aspect.
+                {{ _('Our dedicated team works tirelessly to ensure the success of the ENGMUN events, showcasing passion and expertise in every aspect.') }}
             </p>
         </div>
-
+    
         <!-- Call to Action Button -->
         <div class="relative inline-block group">
             <!-- Button Glow Effect -->
             <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-[#C6943B] to-[#A67B31] opacity-0 blur transition-all duration-300 group-hover:opacity-30"></div>
             
             <!-- Button -->
-            <a href="{{ url_for('team') }}" class="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C6943B] text-white font-semibold 
+            <a href="{{ url_for('team', lang=current_lang) }}" class="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C6943B] text-white font-semibold 
                               shadow-lg transition-all duration-300 animate-on-scroll delay-500
                               hover:bg-[#A67B31] hover:shadow-xl hover:shadow-[#C6943B]/25
                               focus:outline-none focus:ring-2 focus:ring-[#C6943B]/50 focus:ring-offset-2">
-                <span>View Team</span>
+                <span>{{ _('View Team') }}</span>
                 <!-- Arrow Icon -->
                 <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
                      fill="none" 
@@ -196,6 +202,7 @@
             </a>
         </div>
     </div>
+    
 </section>
 
 <style>
@@ -223,7 +230,7 @@
 <!-- Downloadable Files Section -->
 <section class="py-16 bg-white">
     <div class="container mx-auto px-4 animate-on-scroll delay-300 ">
-        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">Essential Resources</h2>
+        <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">{{ _('Essential Resources') }}</h2>
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <!-- Study Guide Download Card -->
             <div class="group relative bg-[#4F7B7B] rounded-2xl p-6 transform hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl">
@@ -234,10 +241,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Delegate Guide</h3>
-                    <p class="text-[#E6E6E6] mb-4">Detailed guidelines for participation as a Delegate.</p>
-                    <a href="{{ url_for('static', filename='files/file_1.pdf') }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300">
-                        <span>Download PDF</span>
+                    <h3 class="text-xl font-bold text-white mb-2">{{ _('Delegate Guide') }}</h3>
+                    <p class="text-[#E6E6E6] mb-4">{{ _('Detailed guidelines for participation as a Delegate.') }}</p>
+                    <a href="{{ url_for('static', filename='files/file_1.pdf', lang=current_lang) }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300">
+                        <span>{{ _('Download PDF') }}</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                         </svg>
@@ -254,10 +261,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-.586-1.414l-3.5-3.5A2 2 0 0012.5 4H7a2 2 0 00-2 2v12a2 2 0 002 2h11z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Chair Guide</h3>
-                    <p class="text-white mb-4">Detailed guidelines for participation as a Chair.</p>
-                    <a href="{{ url_for('static', filename='files/file_1.pdf') }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300">
-                        <span>Download PDF</span>
+                    <h3 class="text-xl font-bold text-white mb-2">{{ _('Chair Guide') }}</h3>
+                    <p class="text-white mb-4">{{ _('Detailed guidelines for participation as a Chair.') }}</p>
+                    <a href="{{ url_for('static', filename='files/file_2.pdf', lang=current_lang) }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300">
+                        <span>{{ _('Download PDF') }}</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                         </svg>
@@ -267,6 +274,9 @@
         </div>
     </div>
 </section>
+
+
+
 
 <!-- Committees Section -->
 <section class="py-16 bg-gray-50">
@@ -296,14 +306,21 @@
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                <span>{{ committee.delegates }} Delegates</span>
+                                <span>{{ committee.delegates }} {{ _('Delegates') }}ْ</span>
                             </div>
                         </div>
                     </div>
                     <!-- Card Footer -->
-                    <div class="p-4 bg-gray-100 text-right">
+                    <div class="p-4 bg-gray-100 {{ 'text-left' if current_lang == 'ar' else 'text-right' }}">
                         <a href="{{ url_for('committee', committee_id=committee_id) }}" class="text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
-                            View Guide →
+                            {{ _('View Guide') }}
+                            <span>
+                                {% if current_lang == 'en' %}
+                                    →
+                                {% elif current_lang == 'ar' %}
+                                    ←
+                                {% endif %}
+                            </span>
                         </a>
                     </div>
                 </div>

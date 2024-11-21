@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-19 21:30+0300\n"
+"POT-Creation-Date: 2024-11-21 20:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,166 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: app.py:51
+#: app.py:72 templates/base.html:84
 msgid "Home"
 msgstr ""
 
-#: app.py:55
-msgid "Concert Details"
+#: app.py:76
+msgid "Event Details"
 msgstr ""
 
-#: app.py:59
+#: app.py:81 templates/team.html:66
 msgid "Our Team"
 msgstr ""
 
-#: app.py:63
-msgid "Contact Us"
+#: app.py:91
+msgid "Committee"
+msgstr ""
+
+#: templates/base.html:151
+msgid "Events"
+msgstr ""
+
+#: templates/base.html:205
+msgid "Team"
+msgstr ""
+
+#: templates/committee.html:37
+msgid "Level"
+msgstr ""
+
+#: templates/committee.html:46 templates/home.html:309
+msgid "Delegates"
+msgstr ""
+
+#: templates/committee.html:55
+msgid "Experience"
+msgstr ""
+
+#: templates/committee.html:64
+msgid "Study Guide"
+msgstr ""
+
+#: templates/committee.html:65
+msgid "Download"
+msgstr ""
+
+#: templates/committee.html:73
+msgid "About the Committee"
+msgstr ""
+
+#: templates/committee.html:81
+msgid "Topics"
+msgstr ""
+
+#: templates/committee.html:94
+msgid "Resources"
+msgstr ""
+
+#: templates/home.html:26
+msgid "FOR"
+msgstr ""
+
+#: templates/home.html:27 templates/home.html:31
+msgid "SCIENCE"
+msgstr ""
+
+#: templates/home.html:28 templates/home.html:32
+msgid "AND"
+msgstr ""
+
+#: templates/home.html:29 templates/home.html:33
+msgid "ENGINEERING"
+msgstr ""
+
+#: templates/home.html:76
+msgid "Why Join ENGMUN?"
+msgstr ""
+
+#: templates/home.html:85
+msgid "Develop Leadership Skills"
+msgstr ""
+
+#: templates/home.html:86
+msgid ""
+"Gain confidence and become an influential leader through debate and "
+"problem-solving experiences."
+msgstr ""
+
+#: templates/home.html:96
+msgid "First Ever in KFU"
+msgstr ""
+
+#: templates/home.html:97
+msgid ""
+"Experience unique and engaging events that bring together science and "
+"engineering."
+msgstr ""
+
+#: templates/home.html:107
+msgid "Sharpen Critical Thinking"
+msgstr ""
+
+#: templates/home.html:108
+msgid ""
+"Analyze complex global issues and craft innovative solutions through "
+"meaningful discussions."
+msgstr ""
+
+#: templates/home.html:127
+msgid "A Message from the Executive Team"
+msgstr ""
+
+#: templates/home.html:130
+msgid ""
+"“Welcome to ENGMUN for Science and Engineering! Our vision is to create a"
+" community that has the capabilities to engage in well-organized and "
+"compelling arguments in the fields of Engineering and Sciences.”"
+msgstr ""
+
+#: templates/home.html:134
+msgid "The ENGMUN Team"
+msgstr ""
+
+#: templates/home.html:171
+msgid "Meet the Executive Team"
+msgstr ""
+
+#: templates/home.html:177
+msgid ""
+"Our dedicated team works tirelessly to ensure the success of the ENGMUN "
+"events, showcasing passion and expertise in every aspect."
+msgstr ""
+
+#: templates/home.html:191
+msgid "View Team"
+msgstr ""
+
+#: templates/home.html:233
+msgid "Essential Resources"
+msgstr ""
+
+#: templates/home.html:244
+msgid "Delegate Guide"
+msgstr ""
+
+#: templates/home.html:245
+msgid "Detailed guidelines for participation as a Delegate."
+msgstr ""
+
+#: templates/home.html:247 templates/home.html:267
+msgid "Download PDF"
+msgstr ""
+
+#: templates/home.html:264
+msgid "Chair Guide"
+msgstr ""
+
+#: templates/home.html:265
+msgid "Detailed guidelines for participation as a Chair."
+msgstr ""
+
+#: templates/home.html:316
+msgid "View Guide"
 msgstr ""
 

@@ -1,205 +1,222 @@
 <!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head lang="{{ current_lang }}" dir="{{ 'rtl' if current_lang == 'ar' else 'ltr' }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 </head>
-<body class="flex flex-col min-h-screen overflow-x-hidden ">
-    <header class=" text-white p-4 fixed z-50 top-0 left-0 w-full ">
-        <div class="container mx-auto">
-            <div class="w-32 h-32 mx-auto shadow-lg bg-gray-200/80 rounded-full flex items-center justify-center">
-                <img src="{{ url_for('static', filename='images/main_logo.png') }}" alt="Company Logo" class="mx-auto">
+<body style="font-family: cairo, sans-serif ;" class="flex flex-col min-h-screen overflow-x-hidden">
+    <header class="bg-transparent text-gray-800 p-4 fixed z-50 top-0 left-0 w-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="w-20 h-20 bg-white rounded-full shadow-xl flex items-center justify-center backdrop-blur-sm">
+                    <img src="{{ url_for('static', filename='images/main_logo.png') }}" alt="Company Logo" class="w-16 h-16 object-contain">
+                </div>
+                
+                <div class="language-switcher">
+                    {% if current_lang == 'en' %}
+                        <a href="{{ request.path }}?lang=ar" class="px-6 py-2 bg-white/80 hover:bg-white shadow-md rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:shadow-lg">العربية</a>
+                    {% elif current_lang == 'ar' %}
+                        <a href="{{ request.path }}?lang=en" class="px-6 py-2 bg-white/80 hover:bg-white shadow-md rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:shadow-lg">English</a>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </header>
 
 
-    <main class="flex-grow container mx-auto  mb-48 ">
+
+
+    <main class="flex-grow container mx-auto  mb-48" dir="{{ 'rtl' if current_lang == 'ar' else 'ltr' }}">
         {% block content %}
         {% endblock %}
     </main>
 
-    <footer class="bg-[#4F7B7B] text-[#E6E6E6] fixed bottom-0 left-0 w-full border-t border-[#3D5F5F]">
+    <footer class="bg-[#4F7B7B]  text-[#E6E6E6] fixed bottom-0 left-0 w-full border-t border-[#3D5F5F]" dir="{{ 'rtl' if current_lang == 'ar' else 'ltr' }}">
         <nav class="max-w-6xl mx-auto px-4 pb-6 md:pb-2">
             <ul class="flex justify-center items-center gap-4 sm:gap-8 md:gap-16">
                 <!-- Home Link -->
-                <li>
-                    <a href="{{ url_for('home') }}" class="group flex flex-col items-center gap-3 transition-all duration-500 ease-out hover:text-[#C6943B] relative p-4
-                    {% if request.endpoint == 'home' %}text-[#C6943B] scale-105{% else %}text-[#E6E6E6]{% endif %}
-                    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6943B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4F7B7B] rounded-xl">
-                        <!-- Animated Background Circle -->
-                        <div class="absolute inset-0 rounded-xl transition-all duration-500 ease-out 
-                            bg-gradient-to-r from-[#4F7B7B]/0 to-[#4F7B7B]/0 
-                            group-hover:from-[#C6943B]/10 group-hover:to-[#C6943B]/5
-                            group-active:from-[#C6943B]/15 group-active:to-[#C6943B]/10
-                            scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100">
-                        </div>
+    <li>
+        <a href="{{ url_for('home', lang=current_lang) }}" class="group flex flex-col items-center gap-3 transition-all duration-500 ease-out hover:text-[#C6943B] relative p-4
+        {% if request.endpoint == 'home' %}text-[#C6943B] scale-105{% else %}text-[#E6E6E6]{% endif %}
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6943B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4F7B7B] rounded-xl">
+            <!-- Animated Background Circle -->
+            <div class="absolute inset-0 rounded-xl transition-all duration-500 ease-out 
+                bg-gradient-to-r from-[#4F7B7B]/0 to-[#4F7B7B]/0 
+                group-hover:from-[#C6943B]/10 group-hover:to-[#C6943B]/5
+                group-active:from-[#C6943B]/15 group-active:to-[#C6943B]/10
+                scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100">
+            </div>
+    
+            <!-- Icon Container -->
+            <div class="relative">
+                <!-- Outer Circle -->
+                <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
+                    group-hover:bg-[#C6943B]/10 scale-[1.5] group-hover:scale-[1.8] -z-10
+                    {% if request.endpoint == 'home' %} bg-gray-200/90 {% endif %}
+                    "></div>
                 
-                        <!-- Icon Container -->
-                        <div class="relative">
-                            <!-- Outer Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/10 scale-[1.5] group-hover:scale-[1.8] -z-10
-                                {% if request.endpoint == 'home' %} bg-gray-200/90 {% else %}{% endif %}
-                                "></div>
-                            
-                            <!-- Inner Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/5 scale-[2] group-hover:scale-[2.5] -z-20"></div>
-                            
-                            <!-- Icon -->
-                            <svg class="w-6 h-6 transition-all duration-500 ease-out transform
-                                group-hover:scale-110 group-active:scale-95
-                                group-hover:rotate-[360deg]" 
-                                stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                            </svg>
-                        </div>
+                <!-- Inner Circle -->
+                <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
+                    group-hover:bg-[#C6943B]/5 scale-[2] group-hover:scale-[2.5] -z-20"></div>
                 
-                        <!-- Text -->
-                        <span class="text-sm font-medium transition-all duration-500 ease-out
-                            group-hover:font-bold group-hover:tracking-wide
-                            relative">
-                            Home
-                            <!-- Text Underline -->
-                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C6943B] transform scale-x-0 transition-transform duration-500 ease-out
-                                group-hover:scale-x-100 origin-center"></span>
-                        </span>
+                <!-- Icon -->
+                <svg class="w-6 h-6 transition-all duration-500 ease-out transform
+                    group-hover:scale-110 group-active:scale-95
+                    group-hover:rotate-[360deg]" 
+                    stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+            </div>
+    
+            <!-- Text -->
+            <span class="text-sm font-medium transition-all duration-500 ease-out
+                group-hover:font-bold group-hover:tracking-wide
+                relative">
+                {{ _('Home') }}
+                <!-- Text Underline -->
+                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C6943B] transform scale-x-0 transition-transform duration-500 ease-out
+                    group-hover:scale-x-100 origin-center"></span>
+            </span>
+    
+            <!-- Decorative Dots -->
+            <div class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
+                transition-all duration-500 ease-out delay-100
+                group-hover:opacity-100 group-hover:animate-ping"></div>
+            <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
+                transition-all duration-500 ease-out delay-200
+                group-hover:opacity-100 group-hover:animate-ping"></div>
+        </a>
+    </li>
+    
+    <!-- Events Link -->
+    <li>
+        <a href="{{ url_for('concert', lang=current_lang) }}" class="group flex flex-col items-center gap-3 transition-all duration-500 ease-out hover:text-[#C6943B] relative p-4
+        {% if request.endpoint == 'concert' %}text-[#C6943B] scale-105{% else %}text-[#E6E6E6]{% endif %}
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6943B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4F7B7B] rounded-xl">
+            <!-- Animated Background Circle -->
+            <div class="absolute inset-0 rounded-xl transition-all duration-500 ease-out 
+                bg-gradient-to-r from-[#4F7B7B]/0 to-[#4F7B7B]/0 
+                group-hover:from-[#C6943B]/10 group-hover:to-[#C6943B]/5
+                group-active:from-[#C6943B]/15 group-active:to-[#C6943B]/10
+                scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100">
+            </div>
+    
+            <!-- Icon Container -->
+            <div class="relative">
+                <!-- Outer Circle -->
+                <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
+                    group-hover:bg-[#C6943B]/10 scale-[1.5] group-hover:scale-[1.8] -z-10
+                    {% if request.endpoint == 'concert' %} bg-gray-200/90 {% endif %}
+                    "></div>
                 
-                        <!-- Decorative Dots -->
-                        <div class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-100
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                        <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-200
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                    </a>
-                </li>
+                <!-- Inner Circle -->
+                <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
+                    group-hover:bg-[#C6943B]/5 scale-[2] group-hover:scale-[2.5] -z-20"></div>
                 
-                <!-- Concert Link -->
-                <li>
-                    <a href="{{ url_for('concert') }}" class="group flex flex-col items-center gap-3 transition-all duration-500 ease-out hover:text-[#C6943B] relative p-4
-                    {% if request.endpoint == 'concert' %}text-[#C6943B] scale-105{% else %}text-[#E6E6E6]{% endif %}
-                    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6943B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4F7B7B] rounded-xl">
-                        <!-- Animated Background Circle -->
-                        <div class="absolute inset-0 rounded-xl transition-all duration-500 ease-out 
-                            bg-gradient-to-r from-[#4F7B7B]/0 to-[#4F7B7B]/0 
-                            group-hover:from-[#C6943B]/10 group-hover:to-[#C6943B]/5
-                            group-active:from-[#C6943B]/15 group-active:to-[#C6943B]/10
-                            scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100">
-                        </div>
+                <!-- Icon -->
+                <svg class="w-6 h-6 transition-all duration-500 ease-out transform
+                            group-hover:scale-110 group-active:scale-95
+                            group-hover:rotate-[360deg]" 
+                    stroke="currentColor" 
+                    fill="none" 
+                    stroke-width="2" 
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    <!-- Small dot for event indicator -->
+                    <circle cx="12" cy="14" r="1" fill="currentColor"/>
+                    <!-- Event lines -->
+                    <path stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="M8 17h8"/>
+                </svg>
+    
                 
-                        <!-- Icon Container -->
-                        <div class="relative">
-                            <!-- Outer Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/10 scale-[1.5] group-hover:scale-[1.8] -z-10
-                                {% if request.endpoint == 'concert' %} bg-gray-200/90 {% else %}{% endif %}
-                                "></div>
-                            
-                            <!-- Inner Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/5 scale-[2] group-hover:scale-[2.5] -z-20"></div>
-                            
-                            <!-- Icon -->
-                            <svg class="w-6 h-6 transition-all duration-500 ease-out transform
-                                        group-hover:scale-110 group-active:scale-95
-                                        group-hover:rotate-[360deg]" 
-                                stroke="currentColor" 
-                                fill="none" 
-                                stroke-width="2" 
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" 
-                                    stroke-linejoin="round" 
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                                <!-- Small dot for event indicator -->
-                                <circle cx="12" cy="14" r="1" fill="currentColor"/>
-                                <!-- Event lines -->
-                                <path stroke-linecap="round" 
-                                    stroke-linejoin="round" 
-                                    d="M8 17h8"/>
-                            </svg>
-
-                            
-                        </div>
+            </div>
+    
+            <!-- Text -->
+            <span class="text-sm font-medium transition-all duration-500 ease-out
+                group-hover:font-bold group-hover:tracking-wide
+                relative">
+                {{ _('Events') }}
+                <!-- Text Underline -->
+                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C6943B] transform scale-x-0 transition-transform duration-500 ease-out
+                    group-hover:scale-x-100 origin-center"></span>
+            </span>
+    
+            <!-- Decorative Dots -->
+            <div class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
+                transition-all duration-500 ease-out delay-100
+                group-hover:opacity-100 group-hover:animate-ping"></div>
+            <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
+                transition-all duration-500 ease-out delay-200
+                group-hover:opacity-100 group-hover:animate-ping"></div>
+        </a>
+    </li>
+    
+    <!-- Team Link -->
+    <li>
+        <a href="{{ url_for('team', lang=current_lang) }}" class="group flex flex-col items-center gap-3 transition-all duration-500 ease-out hover:text-[#C6943B] relative p-4
+        {% if request.endpoint == 'team' %}text-[#C6943B] scale-105{% else %}text-[#E6E6E6]{% endif %}
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6943B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4F7B7B] rounded-xl">
+            <!-- Animated Background Circle -->
+            <div class="absolute inset-0 rounded-xl transition-all duration-500 ease-out 
+                bg-gradient-to-r from-[#4F7B7B]/0 to-[#4F7B7B]/0 
+                group-hover:from-[#C6943B]/10 group-hover:to-[#C6943B]/5
+                group-active:from-[#C6943B]/15 group-active:to-[#C6943B]/10
+                scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100">
+            </div>
+    
+            <!-- Icon Container -->
+            <div class="relative">
+                <!-- Outer Circle -->
+                <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
+                    group-hover:bg-[#C6943B]/10 scale-[1.5] group-hover:scale-[1.8] -z-10
+                    {% if request.endpoint == 'team' %} bg-gray-200/90 {% endif %}
+                    "></div>
                 
-                        <!-- Text -->
-                        <span class="text-sm font-medium transition-all duration-500 ease-out
-                            group-hover:font-bold group-hover:tracking-wide
-                            relative">
-                            Events
-                            <!-- Text Underline -->
-                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C6943B] transform scale-x-0 transition-transform duration-500 ease-out
-                                group-hover:scale-x-100 origin-center"></span>
-                        </span>
+                <!-- Inner Circle -->
+                <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
+                    group-hover:bg-[#C6943B]/5 scale-[2] group-hover:scale-[2.5] -z-20"></div>
                 
-                        <!-- Decorative Dots -->
-                        <div class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-100
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                        <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-200
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                    </a>
-                </li>
-                
-                <!-- Team Link -->
-                <li>
-                    <a href="{{ url_for('team') }}" class="group flex flex-col items-center gap-3 transition-all duration-500 ease-out hover:text-[#C6943B] relative p-4
-                    {% if request.endpoint == 'team' %}text-[#C6943B] scale-105{% else %}text-[#E6E6E6]{% endif %}
-                    focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6943B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#4F7B7B] rounded-xl">
-                        <!-- Animated Background Circle -->
-                        <div class="absolute inset-0 rounded-xl transition-all duration-500 ease-out 
-                            bg-gradient-to-r from-[#4F7B7B]/0 to-[#4F7B7B]/0 
-                            group-hover:from-[#C6943B]/10 group-hover:to-[#C6943B]/5
-                            group-active:from-[#C6943B]/15 group-active:to-[#C6943B]/10
-                            scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100">
-                        </div>
-                
-                        <!-- Icon Container -->
-                        <div class="relative">
-                            <!-- Outer Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/10 scale-[1.5] group-hover:scale-[1.8] -z-10
-                                {% if request.endpoint == 'team' %} bg-gray-200/90 {% else %}{% endif %}
-                                "></div>
-                            
-                            <!-- Inner Circle -->
-                            <div class="absolute inset-0 rounded-full bg-[#C6943B]/0 transition-all duration-500 ease-out
-                                group-hover:bg-[#C6943B]/5 scale-[2] group-hover:scale-[2.5] -z-20"></div>
-                            
-                            <!-- Icon -->
-                            <svg class="w-6 h-6 transition-all duration-500 ease-out transform
-                                group-hover:scale-110 group-active:scale-95
-                                group-hover:rotate-[360deg]" 
-                                stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                            </svg>
-                        </div>
-                
-                        <!-- Text -->
-                        <span class="text-sm font-medium transition-all duration-500 ease-out
-                            group-hover:font-bold group-hover:tracking-wide
-                            relative">
-                            Team
-                            <!-- Text Underline -->
-                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C6943B] transform scale-x-0 transition-transform duration-500 ease-out
-                                group-hover:scale-x-100 origin-center"></span>
-                        </span>
-                
-                        <!-- Decorative Dots -->
-                        <div class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-100
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                        <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
-                            transition-all duration-500 ease-out delay-200
-                            group-hover:opacity-100 group-hover:animate-ping"></div>
-                    </a>
-                </li>
+                <!-- Icon -->
+                <svg class="w-6 h-6 transition-all duration-500 ease-out transform
+                    group-hover:scale-110 group-active:scale-95
+                    group-hover:rotate-[360deg]" 
+                    stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+            </div>
+    
+            <!-- Text -->
+            <span class="text-sm font-medium transition-all duration-500 ease-out
+                group-hover:font-bold group-hover:tracking-wide
+                relative">
+                {{ _('Team') }}
+                <!-- Text Underline -->
+                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C6943B] transform scale-x-0 transition-transform duration-500 ease-out
+                    group-hover:scale-x-100 origin-center"></span>
+            </span>
+    
+            <!-- Decorative Dots -->
+            <div class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
+                transition-all duration-500 ease-out delay-100
+                group-hover:opacity-100 group-hover:animate-ping"></div>
+            <div class="absolute -bottom-1 -left-1 w-2 h-2 rounded-full bg-[#C6943B] opacity-0 
+                transition-all duration-500 ease-out delay-200
+                group-hover:opacity-100 group-hover:animate-ping"></div>
+        </a>
+    </li>
                 
                 
                 
