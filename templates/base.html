@@ -8,12 +8,14 @@
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-
+<!-- Rubik -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -266,6 +268,9 @@
             </ul>
         </nav>
     </footer>
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
 
     <script>
     // Intersection Observer setup
