@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-22 17:59+0300\n"
+"POT-Creation-Date: 2024-11-22 22:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,40 +37,36 @@ msgstr ""
 msgid "Team"
 msgstr ""
 
-#: templates/base.html:194 templates/home.html:421
+#: templates/base.html:194 templates/home.html:507
 msgid "Committees"
 msgstr ""
 
-#: templates/committee.html:37
-msgid "Level"
+#: templates/committee.html:61 templates/home.html:545
+msgid "dialogue_language"
 msgstr ""
 
-#: templates/committee.html:46 templates/home.html:448
-msgid "Delegates"
-msgstr ""
-
-#: templates/committee.html:55
-msgid "Experience"
-msgstr ""
-
-#: templates/committee.html:64
+#: templates/committee.html:70
 msgid "Study Guide"
 msgstr ""
 
-#: templates/committee.html:65
+#: templates/committee.html:71
 msgid "Download"
 msgstr ""
 
-#: templates/committee.html:73
+#: templates/committee.html:79
 msgid "About the Committee"
 msgstr ""
 
-#: templates/committee.html:81
+#: templates/committee.html:87
 msgid "Topics"
 msgstr ""
 
-#: templates/committee.html:94
+#: templates/committee.html:100
 msgid "Resources"
+msgstr ""
+
+#: templates/committee.html:120
+msgid "coming soon"
 msgstr ""
 
 #: templates/home.html:25
@@ -89,102 +85,93 @@ msgstr ""
 msgid "ENGINEERING"
 msgstr ""
 
-#: templates/home.html:91
+#: templates/home.html:247
 msgid "Our Vision"
 msgstr ""
 
-#: templates/home.html:120
+#: templates/home.html:276
 msgid ""
 "Leading in developing a generation of engineers capable of facing global "
 "challenges through innovation and international cooperation."
 msgstr ""
 
-#: templates/home.html:212
+#: templates/home.html:302
 msgid "Why EngMUN?"
 msgstr ""
 
-#: templates/home.html:213
+#: templates/home.html:303
 msgid "First in Region"
 msgstr ""
 
-#: templates/home.html:222
+#: templates/home.html:312
 msgid "Build a Professional Network"
 msgstr ""
 
-#: templates/home.html:223
+#: templates/home.html:313
 msgid "Network with future leaders to expand your career horizons"
 msgstr ""
 
-#: templates/home.html:233
+#: templates/home.html:323
 msgid "Enhance Diplomacy"
 msgstr ""
 
-#: templates/home.html:234
+#: templates/home.html:324
 msgid "Develop your abilities in negotiation, debating, and problem-solving"
 msgstr ""
 
-#: templates/home.html:244
+#: templates/home.html:334
 msgid "Innovative Problem Solving"
 msgstr ""
 
-#: templates/home.html:245
+#: templates/home.html:335
 msgid "Contribute creative solutions to real global challenges"
 msgstr ""
 
-#: templates/home.html:264
-msgid "A Message from the Executive Team"
+#: templates/home.html:354
+msgid "Message from SG"
 msgstr ""
 
-#: templates/home.html:267
-msgid ""
-"“Welcome to EngMUN for Science and Engineering! Our vision is to create a"
-" community that has the capabilities to engage in well-organized and "
-"compelling arguments in the fields of Engineering and Sciences.”"
+#: templates/home.html:357
+msgid "message from sg content"
 msgstr ""
 
-#: templates/home.html:271
-msgid "The EngMUN Team"
+#: templates/home.html:361
+msgid "secretary general"
 msgstr ""
 
-#: templates/home.html:308
+#: templates/home.html:398
 msgid "Meet the Executive Team"
 msgstr ""
 
-#: templates/home.html:314
-msgid ""
-"Our dedicated team works tirelessly to ensure the success of the EngMUN "
-"events, showcasing passion and expertise in every aspect."
-msgstr ""
-
-#: templates/home.html:328
+#: templates/home.html:413
 msgid "View Team"
 msgstr ""
 
-#: templates/home.html:370
+#: templates/home.html:456
 msgid "Resources you need"
 msgstr ""
 
-#: templates/home.html:381
+#: templates/home.html:467
 msgid "Delegate Guide"
 msgstr ""
 
-#: templates/home.html:382
+#: templates/home.html:468
 msgid "Detailed guidelines for participation as a Delegate."
 msgstr ""
 
-#: templates/home.html:384 templates/home.html:404
+#: templates/home.html:470 templates/home.html:490
 msgid "Download PDF"
 msgstr ""
 
-#: templates/home.html:401
+#: templates/home.html:487
 msgid "Chair Guide"
 msgstr ""
 
-#: templates/home.html:402
+#: templates/home.html:488
 msgid "Detailed guidelines for participation as a Chair."
 msgstr ""
 
-#: templates/home.html:455
+#: templates/home.html:559
 msgid "View Guide"
 msgstr ""
 

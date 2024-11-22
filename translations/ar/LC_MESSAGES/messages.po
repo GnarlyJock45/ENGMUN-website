@@ -194,3 +194,8 @@ msgstr "اقرأ المزيد"
 #: templates/home.html:316
 msgid "dialogue_language"
 msgstr "لغة الحوار"
+
+
+#: templates/committee.html:120
+msgid "coming soon"
+msgstr "يتوفر قريبا"

@@ -205,3 +205,8 @@ msgstr "View Guide"
 #: templates/home.html:316
 msgid "dialogue_language"
 msgstr "Dialogue Language"
+
+
+#: templates/committee.html:120
+msgid "coming soon"
+msgstr "Coming Soon"
