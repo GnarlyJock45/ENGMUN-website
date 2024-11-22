@@ -270,9 +270,9 @@
 
 
 <!-- Message from Creators Section -->
-<section class="py-20 bg-[#4F7B7B] relative overflow-hidden">
+<!-- <section class="py-20 bg-[#4F7B7B] relative overflow-hidden"> -->
     <!-- Animated Background Elements -->
-    <div class="absolute inset-0 opacity-10">
+    <!-- <div class="absolute inset-0 opacity-10">
         <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay blur-xl animate-blob"></div>
         <div class="absolute top-80 right-20 w-72 h-72 bg-[#C6943B] rounded-full mix-blend-overlay blur-xl animate-blob animation-delay-2000"></div>
         <div class="absolute bottom-20 left-40 w-96 h-96 bg-[#E6E6E6] rounded-full mix-blend-overlay blur-xl animate-blob animation-delay-4000"></div>
@@ -292,10 +292,69 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 <!-- Team Section -->
+<section class="relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100 py-24 my-12 animate-on-scroll delay-200">
+    <!-- Decorative Background Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -left-1/4 -top-1/4 h-96 w-96 rounded-full bg-[#C6943B]/10 blur-3xl"></div>
+        <div class="absolute -right-1/4 -bottom-1/4 h-96 w-96 rounded-full bg-[#C6943B]/10 blur-3xl"></div>
+    </div>
+
+    <!-- Decorative Dots -->
+    <div class="absolute left-4 top-4 pointer-events-none">
+        <div class="flex gap-2">
+            <div class="h-2 w-2 rounded-full bg-[#C6943B]/40"></div>
+            <div class="h-2 w-2 rounded-full bg-[#C6943B]/40 animation-delay-200"></div>
+            <div class="h-2 w-2 rounded-full bg-[#C6943B]/40 animation-delay-400"></div>
+        </div>
+    </div>
+    <div class="absolute bottom-4 right-4 pointer-events-none">
+        <div class="flex gap-2">
+            <div class="h-2 w-2 rounded-full bg-[#C6943B]/40"></div>
+            <div class="h-2 w-2 rounded-full bg-[#C6943B]/40 animation-delay-200"></div>
+            <div class="h-2 w-2 rounded-full bg-[#C6943B]/40 animation-delay-400"></div>
+        </div>
+    </div>
+
+    <div class="container relative mx-auto px-4 text-center">
+        <!-- Section Header -->
+        <div class="mb-16 space-y-4">
+            <!-- Title with Underline -->
+            <h2 class="relative inline-block text-4xl font-bold text-gray-800 mx-auto">
+                {{ _('Meet the Executive Team') }}
+                <div class="absolute -bottom-4 left-0 h-1 w-full rounded-full bg-gradient-to-r from-[#C6943B]/30 via-[#C6943B]/60 to-[#C6943B]/30"></div>
+            </h2>
+        </div>
+    
+        <!-- Call to Action Button -->
+        <div class="relative inline-block group">
+            <!-- Button Glow Effect -->
+            <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-[#C6943B] to-[#A67B31] opacity-0 blur transition-all duration-300 group-hover:opacity-30"></div>
+            
+            <!-- Button -->
+            <a href="{{ url_for('team', lang=current_lang) }}" class="relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#C6943B] text-white font-semibold 
+                              shadow-lg transition-all duration-300 animate-on-scroll delay-500
+                              hover:bg-[#A67B31] hover:shadow-xl hover:shadow-[#C6943B]/25
+                              focus:outline-none focus:ring-2 focus:ring-[#C6943B]/50 focus:ring-offset-2">
+                <span>{{ _('View Team') }}</span>
+                <!-- Arrow Icon -->
+                <svg class="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
+                     fill="none" 
+                     viewBox="0 0 24 24" 
+                     stroke="currentColor">
+                    <path stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          stroke-width="2" 
+                          d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    
+</section>
 
 
 <style>
@@ -379,14 +438,31 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {% for committee_id, committee in committees.items() %}
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-                    <!-- Card Header -->
-                    <div class="h-40 bg-[#4F7B7B] relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <!-- Card Header with Logo -->
+                    <div class="h-48 bg-[#4F7B7B] relative overflow-hidden">
+                        <!-- Logo Container -->
+                        <div class="absolute top-4 {{'right-4' if current_lang == 'ar' else 'left-4'}} w-16 h-16 bg-white rounded-full p-2 shadow-md z-10">
+                            <img 
+                                src="{{ committee.logo_path }}" 
+                                alt="{{ committee.name }} logo"
+                                class="w-full h-full object-contain rounded-full"
+                            >
+                        </div>
+                        <!-- Action Photo Container -->
+                        <img 
+                            src="{{ committee.action_photo_path }}" 
+                            alt="{{ committee.name }} in action"
+                            class="w-full h-full object-cover"
+                        >
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90"></div>
+                        <!-- Title Container -->
                         <div class="absolute bottom-4 left-4 right-4">
                             <h3 class="text-xl font-bold text-white mb-2">{{ committee.name }}</h3>
                             <p class="text-[#E6E6E6] text-sm">{{ committee.full_name }}</p>
                         </div>
                     </div>
+
                     <!-- Card Content -->
                     <div class="p-6 flex-1 flex flex-col justify-between">
                         <p class="text-[#333333] mb-4">{{ committee.description }}</p>
@@ -401,10 +477,11 @@
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                <span>{{ committee.delegates }} {{ _('Delegates') }}ْ</span>
+                                <span>{{ committee.delegates }} {{ _('Delegates') }}</span>
                             </div>
                         </div>
                     </div>
+
                     <!-- Card Footer -->
                     <div class="p-4 bg-gray-100 {{ 'text-left' if current_lang == 'ar' else 'text-right' }}">
                         <a href="{{ url_for('committee', committee_id=committee_id) }}" class="text-[#C6943B] hover:text-[#A67B31] font-medium transition-colors duration-300">
