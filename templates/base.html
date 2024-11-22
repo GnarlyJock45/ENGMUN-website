@@ -8,12 +8,18 @@
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
 </head>
-<body style="font-family: cairo, sans-serif ;" class="flex flex-col min-h-screen overflow-x-hidden">
+<body style="font-family: Rubik, sans-serif ;" class="flex flex-col min-h-screen overflow-x-hidden">
     <header class="bg-transparent text-gray-800 p-4 fixed z-50 top-0 left-0 w-full">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
@@ -23,9 +29,9 @@
                 
                 <div class="language-switcher">
                     {% if current_lang == 'en' %}
-                        <a href="{{ request.path }}?lang=ar" class="px-6 py-2 bg-white/80 hover:bg-white shadow-md rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:shadow-lg">العربية</a>
+                        <a href="{{ request.path }}?lang=ar" class="px-6 py-3 bg-white/80 hover:bg-white shadow-md rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:shadow-lg">العربية</a>
                     {% elif current_lang == 'ar' %}
-                        <a href="{{ request.path }}?lang=en" class="px-6 py-2 bg-white/80 hover:bg-white shadow-md rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:shadow-lg">English</a>
+                        <a href="{{ request.path }}?lang=en" class="px-6 py-3 bg-white/80 hover:bg-white shadow-md rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:shadow-lg">English</a>
                     {% endif %}
                 </div>
             </div>
