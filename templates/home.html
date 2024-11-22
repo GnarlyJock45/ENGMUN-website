@@ -10,7 +10,7 @@
             muted
             loop
             playsinline>
-            <source src="{{ url_for('static', filename='videos/test_video1.mp4') }}" type="video/mp4">
+            <source src="{{ url_for('static', filename='videos/main_video.mp4') }}" type="video/mp4">
         </video>
         <!-- Overlay with gradient -->
         <div class="absolute inset-0 bg-gradient-to-r from-[#4F7B7B]/60 to-[#3D5F5F]/60 backdrop-blur-[1px] animate-on-scroll fade-only"></div>
@@ -46,12 +46,28 @@
 
         </h1>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute -bottom-32 left-1/2 transform -translate-x-1/2 animate-bounce animate-on-scroll delay-500">
-            <svg class="w-6 h-6 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
-        </div>
+      <!-- Scroll Indicator -->
+    <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2 animate-float">
+        <svg class="w-8 h-8 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+    </div>
+
+    <style>
+    /* Custom Floating Animation */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+    </style>
+
     </div>
 </section>
 
@@ -146,7 +162,45 @@
 
 
 
+<!-- Slogan Section -->
+<section class="py-20 bg-gradient-to-br from-[#4f7b7a]/10 to-[#C6943B]/10 animate-on-scroll">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- English Slogan -->
+            <div class="mb-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-[#4f7b7a] leading-tight animate-on-scroll delay-100">
+                    Engineering a 
+                    <span class="relative inline-block">
+                        sustainable
+                        <span class="absolute bottom-0 left-0 w-full h-2 bg-[#C6943B]/20"></span>
+                    </span>
+                    future
+                </h2>
+            </div>
 
+            <!-- Decorative Divider -->
+            <div class="flex items-center justify-center my-8">
+                <div class="w-16 h-px bg-[#4f7b7a]/30"></div>
+                <div class="mx-4">
+                    <svg class="w-6 h-6 text-[#C6943B]" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4f7b7a"/>
+                    </svg>
+                </div>
+                <div class="w-16 h-px bg-[#4f7b7a]/30"></div>
+            </div>
+
+            <!-- Arabic Slogan -->
+            <div class="mt-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-[#C6943B] leading-tight" dir="rtl">
+                    <span class="inline-block mx-2 text-[#4f7b7a] animate-on-scroll delay-100">ابتكر،</span>
+                    <span class="inline-block mx-2 text-[#C6943B] animate-on-scroll delay-300">هندس،</span>
+                    <span class="inline-block mx-2 text-[#4f7b7a] animate-on-scroll delay-500">اثر</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <style>
@@ -270,9 +324,9 @@
 
 
 <!-- Message from Creators Section -->
-<!-- <section class="py-20 bg-[#4F7B7B] relative overflow-hidden"> -->
+<section class="py-20 bg-[#4F7B7B] relative overflow-hidden">
     <!-- Animated Background Elements -->
-    <!-- <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0 opacity-10">
         <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay blur-xl animate-blob"></div>
         <div class="absolute top-80 right-20 w-72 h-72 bg-[#C6943B] rounded-full mix-blend-overlay blur-xl animate-blob animation-delay-2000"></div>
         <div class="absolute bottom-20 left-40 w-96 h-96 bg-[#E6E6E6] rounded-full mix-blend-overlay blur-xl animate-blob animation-delay-4000"></div>
@@ -280,19 +334,19 @@
     
     <div class="container mx-auto px-4 relative">
         <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
-            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">{{ _('A Message from the Executive Team') }}</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">{{ _('Message from SG') }}</h2>
             <div class="space-y-6 text-[#E6E6E6]">
                 <p class="text-lg leading-relaxed">
-                    {{ _('“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”') }}
+                    {{ _('message from sg content') }}
                 </p>
                 <div class="flex flex-col items-center mt-8 space-y-4">
-                    <div class="w-20 h-1 bg-[#C6943B]"></div>
-                    <p class="text-[#C6943B] font-semibold">{{ _('The EngMUN Team') }}</p>
+                    <div class="w-20 h-1 bg-[#cea254]"></div>
+                    <p class="text-[#cea254] font-semibold">{{ _('secretary general') }}</p>
                 </div>
             </div>
         </div>
     </div>
-</section> -->
+</section>
 
 
 <!-- Team Section -->
@@ -471,14 +525,14 @@
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                <span>{{ committee.experience }}</span>
+                                <span>{{ _('dialogue_language')}}: {{ committee.language }}</span>
                             </div>
-                            <div class="flex items-center text-sm text-[#4F7B7B]">
+                            <!-- <div class="flex items-center text-sm text-[#4F7B7B]">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
-                                <span>{{ committee.delegates }} {{ _('Delegates') }}</span>
-                            </div>
+                                
+                            </div> -->
                         </div>
                     </div>
 

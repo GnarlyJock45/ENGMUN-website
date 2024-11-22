@@ -136,16 +136,16 @@ msgid "First in Region"
 msgstr "أول مؤتمر من نوعه في المنطقة!"
 
 #: templates/home.html:120
-msgid "A Message from the Executive Team"
-msgstr "رسالة من الفريق التنفيذي"
+msgid "Message from SG"
+msgstr "رسالة من الأمين العام"
 
 #: templates/home.html:123
-msgid "“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
-msgstr "“تنظيم مؤتمر يجمع بين محاكاة الأمم المتحدة والعلوم والهندسة، لتمكين الطلاب من تطوير مهاراتهم في حل المشكلات العالمية برؤية هندسية مستدامة”"
+msgid "message from sg content"
+msgstr "“مؤتمر محاكاة الأمم المتحدة (MUN) ليس مجرد حدث عابر، بل هو مساحة تنبض بالإلهام وتجمع العقول لصناعة التغيير. في EngMUN، نلتقي بشغف لنتبادل الأفكار، نواجه التحديات، ونبتكر حلولًا ترسم ملامح مستقبل أفضل. انضم الينا، واجعل صوتك جزءًا من الحكاية."
 
 #: templates/home.html:127
-msgid "The EngMUN Team"
-msgstr "فريق EngMUN"
+msgid "secretary general"
+msgstr "لما الجبر، الأمين العام"
 
 
 
@@ -190,3 +190,7 @@ msgstr "إرشادات مفصلة للمشاركة كقائد لجنة"
 msgid "View Guide"
 msgstr "اقرأ المزيد"
 
+
+#: templates/home.html:316
+msgid "dialogue_language"
+msgstr "لغة الحوار"

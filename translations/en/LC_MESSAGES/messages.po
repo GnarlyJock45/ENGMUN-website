@@ -136,16 +136,16 @@ msgid "First in Region"
 msgstr "First conference of its kind in the region!"
 
 #: templates/home.html:120
-msgid "A Message from the Executive Team"
-msgstr "A Message from the Executive Team"
+msgid "Message from SG"
+msgstr "A Message from the Secretary General"
 
 #: templates/home.html:123
-msgid "“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
-msgstr "“To organize a conference that integrates Model United Nations with science and engineering, empowering students to develop their skills in solving global issues with a sustainable engineering perspective”"
+msgid "message from sg content"
+msgstr "“Model United Nations (MUN) is more than just a conference — it’s a journey of growth, connection, and purpose. At EngMUN, we come together to dream, collaborate, and engineer a brighter, more sustainable future. Join us, and let your voice be the driving force behind the change we are determined to create!”"
 
 #: templates/home.html:127
-msgid "The EngMUN Team"
-msgstr "The EngMUN Team"
+msgid "secretary general"
+msgstr "Lama AlJabr, Secretary General "
 
 
 
@@ -201,3 +201,7 @@ msgid "View Guide"
 msgstr "View Guide"
 
 
+
+#: templates/home.html:316
+msgid "dialogue_language"
+msgstr "Dialogue Language"

@@ -8,6 +8,7 @@
             "delegates": "20",
             "experience": "Beginner Friendly",
             "description": "The Arab League focuses on cooperation among Arab countries to address common regional challenges",
+            "language": "Arabic",
             "logo_path": "static/images/committees/arab_league_logo.png",
             "action_photo_path": "/static/images/committees/arab_league_action.jpg",
             "topics": [
@@ -30,6 +31,7 @@
             "delegates": "25",
             "experience": "Intermediate",
             "description": "The UNHRC works to promote and protect human rights globally",
+            "language": "English",
             "logo_path": "/static/images/committees/unhrc_logo.png",
             "action_photo_path": "/static/images/committees/unhrc_action.jpg",
             "topics": [
@@ -52,6 +54,7 @@
             "delegates": "22",
             "experience": "All Levels",
             "description": "The UNCSW advocates for gender equality and women's empowerment globally",
+            "language": "English",
             "logo_path": "/static/images/committees/uncsw_logo.png",
             "action_photo_path": "/static/images/committees/uncsw_action.jpg",
             "topics": [
@@ -74,6 +77,7 @@
             "delegates": "18",
             "experience": "Advanced",
             "description": "UNOOSA addresses challenges related to space exploration and management",
+            "language": "English",
             "logo_path": "/static/images/committees/unoosa_logo.png",
             "action_photo_path": "/static/images/committees/unoosa_action.jpg",
             "topics": [
