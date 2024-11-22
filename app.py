@@ -1,8 +1,11 @@
 from flask import Flask, render_template, abort, request, url_for, redirect
 from flask_babel import Babel, gettext as _
 
-import json
+
+
 import os
+import json
+
 
 app = Flask(__name__)
 
@@ -102,6 +105,9 @@ def committee(committee_id):
 def ensure_lang_in_url():
     if 'lang' not in request.args and request.endpoint == 'home':
         return redirect(url_for('home', lang=app.config['BABEL_DEFAULT_LOCALE']))
+    
+
+
 
 
 if __name__ == '__main__':

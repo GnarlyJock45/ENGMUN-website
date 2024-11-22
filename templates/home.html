@@ -513,20 +513,46 @@
                     <div class="h-48 bg-[#4F7B7B] relative overflow-hidden">
                         <!-- Logo Container -->
                         <div class="absolute top-4 {{'right-4' if current_lang == 'ar' else 'left-4'}} w-16 h-16 bg-white rounded-full p-2 shadow-md z-10">
-                            <img 
-                                src="{{ committee.logo_path }}" 
-                                alt="{{ committee.name }} logo"
-                                class="w-full h-full object-contain rounded-full"
-                            >
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="{{ committee.logo_path|replace('.png', '_64x64.webp') }} 64w,
+                                            {{ committee.logo_path|replace('.png', '_128x128.webp') }} 128w"
+                                    sizes="64px">
+                                <img 
+                                    src="{{ committee.logo_path|replace('.png', '_64x64.webp') }}"
+                                    alt="{{ committee.name }} logo"
+                                    class="w-full h-full object-contain rounded-full"
+                                    width="64"
+                                    height="64"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </picture>
                         </div>
+
                         <!-- Action Photo Container -->
-                        <img 
-                            src="{{ committee.action_photo_path }}" 
-                            alt="{{ committee.name }} in action"
-                            class="w-full h-full object-cover"
-                        >
+                        <picture>
+                            <source
+                                type="image/webp"
+                                srcset="{{ committee.action_photo_path|replace('.jpg', '_640x360.webp') }} 640w,
+                                        {{ committee.action_photo_path|replace('.jpg', '_1280x720.webp') }} 1280w"
+                                sizes="(max-width: 640px) 640px,
+                                    1280px">
+                            <img 
+                                src="{{ committee.action_photo_path|replace('.jpg', '_640x360.webp') }}"
+                                alt="{{ committee.name }} in action"
+                                class="w-full h-full object-cover"
+                                width="1280"
+                                height="720"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </picture>
+
                         <!-- Gradient Overlay -->
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F7B7B]/90"></div>
+
                         <!-- Title Container -->
                         <div class="absolute bottom-4 left-4 right-4">
                             <h3 class="text-xl font-bold text-white mb-2">{{ committee.name }}</h3>
