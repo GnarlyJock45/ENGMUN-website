@@ -176,7 +176,8 @@ msgstr "Delegate Guide"
 
 #: templates/home.html:238
 msgid "Detailed guidelines for participation as a Delegate."
-msgstr "Detailed guidelines for participation as a Delegate."
+msgstr "Detailed guidelines for participation as a Delegate"
+
 #: templates/home.html:240 templates/home.html:260
 msgid "Download PDF"
 msgstr "Download PDF"
@@ -187,7 +188,7 @@ msgstr "Chair Guide"
 
 #: templates/home.html:258
 msgid "Detailed guidelines for participation as a Chair."
-msgstr "Detailed guidelines for participation as a Chair."
+msgstr "Detailed guidelines for participation as a Chair"
 
 
 

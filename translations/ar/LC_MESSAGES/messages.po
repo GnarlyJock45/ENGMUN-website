@@ -141,7 +141,7 @@ msgstr "رسالة من الفريق التنفيذي"
 
 #: templates/home.html:123
 msgid "“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
-msgstr "“تنظيم مؤتمر يجمع بين محاكاة الأمم المتحدة والعلوم والهندسة، لتمكين الطلاب من تطوير مهاراتهم في حل المشكلات العالمية برؤية هندسية مستدامة.”"
+msgstr "“تنظيم مؤتمر يجمع بين محاكاة الأمم المتحدة والعلوم والهندسة، لتمكين الطلاب من تطوير مهاراتهم في حل المشكلات العالمية برؤية هندسية مستدامة”"
 
 #: templates/home.html:127
 msgid "The EngMUN Team"
@@ -172,7 +172,7 @@ msgstr "دليل ممثلين الدول"
 
 #: templates/home.html:238
 msgid "Detailed guidelines for participation as a Delegate."
-msgstr "إرشادات مفصلة للمشاركة كممثل دولة."
+msgstr "إرشادات مفصلة للمشاركة كممثل دولة"
 
 #: templates/home.html:240 templates/home.html:260
 msgid "Download PDF"
@@ -184,7 +184,7 @@ msgstr " دليل قائد اللجنة"
 
 #: templates/home.html:258
 msgid "Detailed guidelines for participation as a Chair."
-msgstr "إرشادات مفصلة للمشاركة كقائد لجنة."
+msgstr "إرشادات مفصلة للمشاركة كقائد لجنة"
 
 #: templates/home.html:316
 msgid "View Guide"
