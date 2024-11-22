@@ -30,11 +30,11 @@
                 <!-- Committee Logo -->
                 <div class="mb-8">
                     {% if committee.logo_path %}
-                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto bg-white rounded-full p-3 shadow-lg">
+                        <div class="w-24 h-24 flex justify-center mx-auto items-center md:w-32 md:h-32 mx-auto bg-white rounded-full p-3 shadow-lg">
                             <img 
                                 src="{{ committee.logo_path }}" 
                                 alt="{{ committee.name }} logo"
-                                class="w-full h-full object-contain"
+                                class="w-20 h-20  object-contain"
                             >
                         </div>
                     {% endif %}
