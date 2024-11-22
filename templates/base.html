@@ -198,12 +198,12 @@
         </button>
 
         <!-- Enhanced Dropdown Menu -->
-        <ul id="committeesDropdown" class="absolute left-1/2 -translate-x-1/2 bottom-full mb-4 w-56 bg-gradient-to-b from-[#2A4B55] to-[#2A4B55]/95 backdrop-blur-md rounded-2xl shadow-xl 
+        <ul id="committeesDropdown" class="absolute left-1/2 {{ 'ml-4' if current_lang == 'ar' else '' }}  -translate-x-1/2 bottom-full mb-4 w-56 bg-gradient-to-b from-[#2A4B55] to-[#2A4B55]/95 backdrop-blur-md rounded-2xl shadow-xl 
             opacity-0 invisible transform scale-95 origin-bottom transition-all duration-300 ease-out z-20
             border border-[#C6943B]/20">
             
             <!-- Dropdown Arrow -->
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 rotate-45 
+            <div class="absolute bottom-0 left-1/2 {{ '-ml-4' if current_lang == 'ar' else '' }} -translate-x-1/2 translate-y-1/2 w-4 h-4 rotate-45 
                 bg-[#2A4B55] border-r border-b border-[#C6943B]/20"></div>
 
                 {% for committee_id, committee in committees.items() %}   

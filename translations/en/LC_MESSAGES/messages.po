@@ -100,7 +100,7 @@ msgstr "Our Vision"
 
 #: templates/home.html:91
 msgid "Leading in developing a generation of engineers capable of facing global challenges through innovation and international cooperation."
-msgstr "Leading in developing a generation of engineers capable of facing global challenges through innovation and international cooperation"
+msgstr "To build a generation capable of addressing global challenges through innovation and collaboration"
 
 
 #: templates/home.html:69
@@ -141,7 +141,7 @@ msgstr "A Message from the Executive Team"
 
 #: templates/home.html:123
 msgid "“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
-msgstr "“Organizing a conference that combines Model United Nations simulations and engineering, enabling students to develop their skills in addressing global challenges with a sustainable engineering perspective”"
+msgstr "“To organize a conference that integrates Model United Nations with science and engineering, empowering students to develop their skills in solving global issues with a sustainable engineering perspective”"
 
 #: templates/home.html:127
 msgid "The EngMUN Team"

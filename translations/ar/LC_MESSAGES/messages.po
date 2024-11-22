@@ -101,7 +101,7 @@ msgstr "رؤيتنا"
 
 #: templates/home.html:91
 msgid "Leading in developing a generation of engineers capable of facing global challenges through innovation and international cooperation."
-msgstr "الريادة في تطوير جيل من المهندسين القادرين على مواجهة التحديات العالمية من خلال الابتكار والتعاون الدولي."
+msgstr "بناء جيل قادر على مواجهة التحديات العالمية من خلال الابتكار والتعاون"
 
 #: templates/home.html:69
 msgid "Why EngMUN?"
@@ -141,7 +141,7 @@ msgstr "رسالة من الفريق التنفيذي"
 
 #: templates/home.html:123
 msgid "“Welcome to EngMUN for Science and Engineering! Our vision is to create a community that has the capabilities to engage in well-organized and compelling arguments in the fields of Engineering and Sciences.”"
-msgstr "“تنظيم مؤتمر يجمع بين محاكاة الأمم المتحدة والهندسة، لتمكين الطلاب من تطوير مهاراتهم في حل المشكلات العالمية بنظرة هندسية مستدامة.”"
+msgstr "“تنظيم مؤتمر يجمع بين محاكاة الأمم المتحدة والعلوم والهندسة، لتمكين الطلاب من تطوير مهاراتهم في حل المشكلات العالمية برؤية هندسية مستدامة.”"
 
 #: templates/home.html:127
 msgid "The EngMUN Team"
