@@ -13,7 +13,7 @@
             <source src="{{ url_for('static', filename='videos/main_video.mp4') }}" type="video/mp4">
         </video>
         <!-- Overlay with gradient -->
-        <div class="absolute inset-0 bg-gradient-to-r from-[#4F7B7B]/60 to-[#3D5F5F]/60 backdrop-blur-[1px] animate-on-scroll fade-only"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#4F7B7B]/60 to-[#3D5F5F]/60 backdrop-blur-[2px] animate-on-scroll fade-only"></div>
     </div>
 
     <!-- Minimal Content -->
@@ -46,11 +46,13 @@
 
         </h1>
 
-      <!-- Scroll Indicator -->
-    <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2 animate-float">
-        <svg class="w-8 h-8 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-        </svg>
+      <!-- Then update the arrow HTML -->
+    <div class="absolute -bottom-32 left-0 w-full flex justify-center items-center">
+        <div class="animate-float">
+            <svg class="w-8 h-8 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
     </div>
 
     <style>
