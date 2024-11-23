@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "postcss static/src/main.css -o static/dist/main.css",
-    "watch": "postcss static/src/main.css -o static/dist/main.css --watch",
-    "build:prod": "postcss static/src/main.css -o static/dist/main.css --env production"
+    "build": "npx postcss static/src/main.css -o static/dist/main.css",
+    "build:prod": "npx postcss static/src/main.css -o static/dist/main.css --env production",
+    "watch": "npx postcss static/src/main.css -o static/dist/main.css --watch"
   },
   "keywords": [],
   "author": "",
