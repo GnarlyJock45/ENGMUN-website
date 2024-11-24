@@ -125,11 +125,11 @@ msgstr "Develop your abilities in negotiation, debating, and problem-solving"
 
 #: templates/home.html:100
 msgid "Innovative Problem Solving"
-msgstr "Innovative Problem Solving"
+msgstr "Transform Problem Solving"
 
 #: templates/home.html:101
 msgid "Contribute creative solutions to real global challenges"
-msgstr "Contribute creative solutions to real global challenges"
+msgstr "Work on creative solutions to real global challenges"
 
 #: templates/home.html:163
 msgid "First in Region"

@@ -109,7 +109,7 @@ msgstr "لماذا EngMUN؟"
 
 #: templates/home.html:78
 msgid "Build a Professional Network"
-msgstr "بناء شبكة علاقات مهنية"
+msgstr "بناء شبكة علاقات"
 
 #: templates/home.html:79
 msgid "Network with future leaders to expand your career horizons"
@@ -129,7 +129,7 @@ msgstr "إيجاد حلول مبتكرة"
 
 #: templates/home.html:101
 msgid "Contribute creative solutions to real global challenges"
-msgstr "ساهم في طرح حلول خلاقة لتحديات عالمية حقيقية"
+msgstr "ساهم في طرح حلول لتحديات عالمية حقيقية"
 
 #: templates/home.html:163
 msgid "First in Region"
