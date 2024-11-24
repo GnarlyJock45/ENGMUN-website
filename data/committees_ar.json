@@ -53,7 +53,7 @@
             "level": "",
             "delegates": "",
             "experience": "",
-            "description": "تدافع لجنة الأمم المتحدة لوضع المرأة عن المساواة بين الجنسين وتمكين المرأة عالميًا",
+            "description": "تهدف لجنة الأمم المتحدة لوضع المرأة لتمكين المرأة عالميًا",
             "language": "الانجليزية",
             "logo_path": "/static/images/committees/uncsw_logo.png",
             "action_photo_path": "/static/images/committees/uncsw_action.jpg",
@@ -63,8 +63,8 @@
                     "description": "تعزيز القيادة والمشاركة في مجالات العلوم والتكنولوجيا والهندسة والرياضيات"
                 },
                 {
-                    "title": "تعزيز مشاركة وتمكين المرأة في البحث",
-                    "description": "تعزيز تكافؤ الفرص للنساء في الأبحاث الأكاديمية والصناعية"
+                    "title": "تعزيز المرأة في البحث",
+                    "description": "تعزيز مشاركة وتمكين المرأة في البحث"
                 }
             ],
             "resources": []
