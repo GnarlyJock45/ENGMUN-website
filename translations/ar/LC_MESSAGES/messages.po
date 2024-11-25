@@ -117,7 +117,7 @@ msgstr "تواصل مع قادة المستقبل لتوسيع آفاقك الم
 
 #: templates/home.html:89
 msgid "Enhance Diplomacy"
-msgstr "تعزيز مهارات الدبلوماسية والقيادة"
+msgstr "تعزيز مهارات الدبلوماسية"
 
 #: templates/home.html:90
 msgid "Develop your abilities in negotiation, debating, and problem-solving"
@@ -133,7 +133,7 @@ msgstr "ساهم في طرح حلول لتحديات عالمية حقيقية"
 
 #: templates/home.html:163
 msgid "First in Region"
-msgstr "أول مؤتمر من نوعه في المنطقة!"
+msgstr "أول حدث من نوعه في المنطقة!"
 
 #: templates/home.html:120
 msgid "Message from SG"
@@ -141,7 +141,7 @@ msgstr "رسالة من الأمين العام"
 
 #: templates/home.html:123
 msgid "message from sg content"
-msgstr "“مؤتمر محاكاة الأمم المتحدة (MUN) ليس مجرد حدث عابر، بل هو مساحة تنبض بالإلهام وتجمع العقول لصناعة التغيير. في EngMUN، نلتقي بشغف لنتبادل الأفكار، نواجه التحديات، ونبتكر حلولًا ترسم ملامح مستقبل أفضل. انضم الينا، واجعل صوتك جزءًا من الحكاية.”"
+msgstr "حدث محاكاة الأمم المتحدة (MUN) ليس مجرد حدث عابر، بل هو مساحة تنبض بالإلهام وتجمع العقول لصناعة التغيير. في EngMUN، نلتقي بشغف لنتبادل الأفكار، نواجه التحديات، ونبتكر حلولًا ترسم ملامح مستقبل أفضل. انضم الينا، واجعل صوتك جزءًا من الحكاية.”"
 
 #: templates/home.html:127
 msgid "secretary general"
