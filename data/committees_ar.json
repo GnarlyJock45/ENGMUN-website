@@ -14,7 +14,7 @@
             "topics": [
                 {
                     "title": "تمكين الشباب من خلال التعليم الهندسي",
-                    "description": "ردم فجوة المهارات في العالم العربي"
+                    "description": "تقليص فجوة المهارات في العالم العربي"
                 },
                 {
                     "title": "التحول الرقمي والهندسة المستدامة في النقل",
@@ -53,7 +53,7 @@
             "level": "",
             "delegates": "",
             "experience": "",
-            "description": "تهدف لجنة الأمم المتحدة لوضع المرأة لتمكين المرأة عالميًا",
+            "description": "تسعى لجنة الأمم المتحدة لوضع المرأة إلى تمكين المرأة عالميًا",
             "language": "الانجليزية",
             "logo_path": "/static/images/committees/uncsw_logo.png",
             "action_photo_path": "/static/images/committees/uncsw_action.jpg",

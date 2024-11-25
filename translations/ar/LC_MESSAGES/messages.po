@@ -113,7 +113,7 @@ msgstr "بناء شبكة علاقات"
 
 #: templates/home.html:79
 msgid "Network with future leaders to expand your career horizons"
-msgstr "تواصل مع قادة المستقبل لتوسيع آفاقك المهنية"
+msgstr "تواصل مع قادة المستقبل لتوسيع تطلعاتك المهنية"
 
 #: templates/home.html:89
 msgid "Enhance Diplomacy"
