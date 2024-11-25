@@ -12,9 +12,32 @@
 
 
 <!-- Rubik -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"> -->
+
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" as="style">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    @font-face {
+      font-family: 'Cairo';
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Rubik';
+      font-display: swap;
+    }
+  </style>
 
 </head>
 <body style="font-family: Rubik, sans-serif ;" class="flex flex-col min-h-screen overflow-x-hidden">
@@ -29,10 +52,12 @@
                         <source
                             type="image/webp"
                             srcset="{{ url_for('static', filename='images/committees/eng_logo_64x64.webp') }} 64w,
-                                    {{ url_for('static', filename='images/committees/eng_logo_128x128.webp') }} 128w"
-                            sizes="128px">
+                                    {{ url_for('static', filename='images/committees/eng_logo_128x128.webp') }} 128w,
+                                    {{ url_for('static', filename='images/committees/eng_logo_256x256.webp') }} 256w
+                                    "
+                            sizes="256px">
                         <img 
-                            src="{{ url_for('static', filename='images/committees/eng_logo_64x64.webp') }}"
+                            src="{{ url_for('static', filename='images/committees/eng_logo_128x128.webp') }}"
                             alt="Engineering logo"
                             class="w-full h-full object-contain rounded-full"
                             width="64"
@@ -46,10 +71,12 @@
                         <source
                             type="image/webp"
                             srcset="{{ url_for('static', filename='images/committees/main_logo_64x64.webp') }} 64w,
-                                    {{ url_for('static', filename='images/committees/main_logo_128x128.webp') }} 128w"
-                            sizes="128px">
+                                    {{ url_for('static', filename='images/committees/main_logo_128x128.webp') }} 128w,
+                                    {{ url_for('static', filename='images/committees/main_logo_256x256.webp') }} 256w
+                                    "
+                            sizes="256px">
                         <img 
-                            src="{{ url_for('static', filename='images/committees/main_logo_64x64.webp') }}"
+                            src="{{ url_for('static', filename='images/committees/main_logo_128x128.webp') }}"
                             alt="Engineering logo"
                             class="w-full h-full object-contain rounded-full"
                             width="64"

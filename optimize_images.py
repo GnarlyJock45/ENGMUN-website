@@ -27,14 +27,21 @@ def optimize_image(input_path, output_prefix, sizes, is_logo=False):
                 # Prepare output path
                 output_path = f"{output_prefix}_{width}x{height}.webp"
 
+
+                # Higher quality settings for logos
+                if is_logo:
+                    resized_img.save(output_path, 'WEBP', quality=100, method=6, lossless=True)
+                else:
+                    resized_img.save(output_path, 'WEBP', quality=85, method=6)
+
                 # Save as WebP
-                resized_img.save(
-                    output_path, 
-                    'WEBP', 
-                    quality=85, 
-                    method=6, 
-                    lossless=is_logo
-                )
+                # resized_img.save(
+                #     output_path, 
+                #     'WEBP', 
+                #     quality=85, 
+                #     method=6, 
+                #     lossless=is_logo
+                # )
                 
                 print(f"Created: {output_path}")
 
@@ -50,7 +57,8 @@ def process_committee_images(static_folder="static"):
     # Define sizes
     logo_sizes = [
         (64, 64),    # Small logo for cards
-        (128, 128)   # Larger logo if needed
+        (128, 128),   # Larger logo if needed
+        (256, 256),   # Largest logo if needed
     ]
     
     action_sizes = [
