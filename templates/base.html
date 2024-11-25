@@ -10,10 +10,6 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='dist/main.css') }}">
 
-<!-- Cairo -->
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> -->
 
 <!-- Rubik -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +22,50 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
                 <div class="w-40 h-20 bg-white rounded-full shadow-xl flex items-center justify-center backdrop-blur-sm">
-                    <img src="{{ url_for('static', filename='images/eng_logo.png') }}" alt="Company Logo" class="w-20 h-20 rounded-full object-contain">
-                    <img src="{{ url_for('static', filename='images/main_logo.png') }}" alt="Company Logo" class="w-20 h-20 object-contain">
+                    
+                    
+                    
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="{{ url_for('static', filename='images/committees/eng_logo_64x64.webp') }} 64w,
+                                    {{ url_for('static', filename='images/committees/eng_logo_128x128.webp') }} 128w"
+                            sizes="128px">
+                        <img 
+                            src="{{ url_for('static', filename='images/committees/eng_logo_64x64.webp') }}"
+                            alt="Engineering logo"
+                            class="w-full h-full object-contain rounded-full"
+                            width="64"
+                            height="64"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                     </picture>
+
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="{{ url_for('static', filename='images/committees/main_logo_64x64.webp') }} 64w,
+                                    {{ url_for('static', filename='images/committees/main_logo_128x128.webp') }} 128w"
+                            sizes="128px">
+                        <img 
+                            src="{{ url_for('static', filename='images/committees/main_logo_64x64.webp') }}"
+                            alt="Engineering logo"
+                            class="w-full h-full object-contain rounded-full"
+                            width="64"
+                            height="64"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                     </picture>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- <img src="{{ url_for('static', filename='images/main_logo.png') }}" alt="Company Logo" class="w-20 h-20 object-contain"> -->
                 </div>
                 <!-- <div class="w-20 h-20 bg-white rounded-full shadow-xl flex items-center justify-center backdrop-blur-sm">
                 </div> -->
