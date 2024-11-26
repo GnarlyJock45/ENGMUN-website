@@ -81,7 +81,7 @@ def process_committee_images(static_folder="static"):
         # Process based on image type
         if filename.endswith('_logo.png'):
             optimize_image(input_path, output_prefix, logo_sizes, is_logo=True)
-        elif filename.endswith(('_action.jpg', '_action.jpeg')):
+        elif filename.endswith(('_action.jpg', '_action.jpeg','_action.png')):
             optimize_image(input_path, output_prefix, action_sizes, is_logo=False)
 
 if __name__ == "__main__":

@@ -60,12 +60,12 @@
                     <picture id="eng-logo">
                         <source
                             type="image/webp"
-                            srcset="{{ url_for('static', filename='images/committees/eng_logo_64x64.webp') }} 64w,
-                                    {{ url_for('static', filename='images/committees/eng_logo_128x128.webp') }} 128w,
-                                    {{ url_for('static', filename='images/committees/eng_logo_256x256.webp') }} 256w"
-                            sizes="256px">
+                            srcset="{{ url_for('static', filename='images/committees/eng_action_640x360.webp') }} 640w,
+                                    {{ url_for('static', filename='images/committees/eng_action_1280x720.webp') }} 1280"
+                            sizes="(max-width: 600px) 200px, (max-width: 1200px) 256px, 320px">
+
                         <img 
-                            src="{{ url_for('static', filename='images/committees/eng_logo_128x128.webp') }}"
+                            src="{{ url_for('static', filename='images/committees/eng_action_640x360.webp') }}"
                             alt="Engineering logo"
                             class="w-full h-full object-contain rounded-full ml-2"
                             width="64"
@@ -73,7 +73,7 @@
                             decoding="async"
                         >
                     </picture>
-                
+
                     <picture id="main-logo">
                         <source
                             type="image/webp"
