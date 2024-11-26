@@ -87,7 +87,7 @@ def concert():
 @app.route('/team')
 def team():
     team_members = load_team_members()
-    return render_template('team.html', title=_('Our Team'), team_members=team_members)
+    return render_template('team.html', title=_('Executive Team'), team_members=team_members)
 
 
 
