@@ -97,49 +97,55 @@
                         // Set initial states
                         gsap.set('#logo-container', { opacity: 0, y: -50 });
                         gsap.set(['#eng-logo img', '#main-logo img'], { opacity: 0, scale: 0.5, rotation: -180 });
-                    
-                        // Create animation timeline with faster durations
+
+                        // Create animation timeline
                         const tl = gsap.timeline({
-                            defaults: { duration: 0.6, ease: 'power3.out' }  // Reduced from 1 to 0.6
+                            defaults: { duration: 0.6, ease: 'power3.out' }
                         });
-                    
-                        // Faster container animation
+
+                        // Entrance animation
                         tl.to('#logo-container', {
                             opacity: 1,
                             y: 0,
-                            duration: 0.8,  // Reduced from 1.2 to 0.8
+                            duration: 0.8,
                             ease: 'elastic.out(1, 0.8)'
                         })
-                        
-                        // Faster logo animations
                         .to(['#eng-logo img', '#main-logo img'], {
                             opacity: 1,
                             scale: 1,
                             rotation: 0,
-                            duration: 1,    // Reduced from 1.5 to 1
-                            stagger: 0.1,   // Reduced from 0.2 to 0.1
+                            duration: 1,
+                            stagger: 0.1,
                             ease: 'back.out(1.7)'
-                        }, '-=0.3')        // Reduced from -=0.5 to -=0.3
-                    
-                       // Quicker floating animation
-                        const floatingAnimation = gsap.to(['#eng-logo img', '#main-logo img'], {
-                            y: -3,         // Reduced from -5 to -3
-                            duration: 1,    // Reduced from 1.5 to 1
-                            yoyo: true,
-                            repeat: -1,
-                            ease: 'power1.inOut',
-                            stagger: {
-                                each: 0.1,  // Reduced from 0.2 to 0.1
-                                yoyo: true
-                            }
+                        }, '-=0.3')
+
+                        // Add floating animation
+                        .add(() => {
+                            const floatingAnimation = gsap.to(['#eng-logo img', '#main-logo img'], {
+                                y: -3,
+                                duration: 1,
+                                yoyo: true,
+                                repeat: 5, // Number of floats
+                                ease: 'power1.inOut',
+                                stagger: {
+                                    each: 0.1,
+                                    yoyo: true
+                                }
+                            });
+                        })
+
+                        // Final settling animation - gentle return to perfect position
+                        .to(['#eng-logo img', '#main-logo img'], {
+                            y: 0,           // Return to original Y position
+                            scale: 1,       // Ensure perfect 1:1 scale
+                            rotation: 0,    // Ensure no rotation
+                            duration: 0.8,  // Gentle duration
+                            ease: 'power2.out',
+                            delay: 5,       // Wait for floating to complete
+                            clearProps: 'transform' // Clear transform properties for crisp rendering
                         });
 
-                        // Stop floating animation after 7 seconds
-                        setTimeout(() => {
-                            floatingAnimation.kill(); // Stops only the floating animation
-                        }, 7000); // 7 seconds in milliseconds
-                    
-                        // Faster hover animations
+                        // Hover animations
                         const logos = document.querySelectorAll('#eng-logo img, #main-logo img');
                         
                         logos.forEach(logo => {
@@ -147,25 +153,25 @@
                                 gsap.to(logo, {
                                     scale: 1.15,
                                     rotation: 10,
-                                    duration: 0.2,    // Reduced from 0.3 to 0.2
+                                    duration: 0.2,
                                     ease: 'power2.out'
                                 });
                             });
-                    
+
                             logo.addEventListener('mouseleave', () => {
                                 gsap.to(logo, {
                                     scale: 1,
                                     rotation: 0,
-                                    duration: 0.2,    // Reduced from 0.3 to 0.2
-                                    ease: 'power2.inOut'
+                                    duration: 0.2,
+                                    ease: 'power2.inOut',
+                                    clearProps: 'transform' // Clear transforms on hover end
                                 });
                             });
-                    
-                            // Faster click animation
+
                             logo.addEventListener('click', () => {
                                 gsap.to(logo, {
                                     scale: 0.9,
-                                    duration: 0.08,   // Reduced from 0.1 to 0.08
+                                    duration: 0.08,
                                     yoyo: true,
                                     repeat: 1,
                                     ease: 'power2.inOut'
