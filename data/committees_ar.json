@@ -13,12 +13,12 @@
             "action_photo_path": "/static/images/committees/arab_league_action.jpg",
             "topics": [
                 {
-                    "title": "تمكين الشباب من خلال التعليم الهندسي",
-                    "description": "تقليص فجوة المهارات في العالم العربي"
-                },
-                {
                     "title": "التحول الرقمي والهندسة المستدامة في النقل",
                     "description": "إنشاء مدن ذكية وخضراء"
+                },
+                {
+                    "title": "تمكين الشباب من خلال التعليم الهندسي",
+                    "description": "تقليص فجوة المهارات في العالم العربي"
                 }
             ],
             "resources": []

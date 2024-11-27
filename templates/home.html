@@ -46,16 +46,30 @@
 
         </h1>
 
-      <!-- Then update the arrow HTML -->
-    <div class="absolute -bottom-32 left-0 w-full flex justify-center items-center">
-        <div class="animate-float">
-            <svg class="w-8 h-8 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+        <!-- Arrow and Sign In Button Container -->
+        <div class="absolute -bottom-40 left-0 w-full flex flex-col items-center gap-12">
+            <!-- Arrow (existing) -->
+            <div class="animate-float">
+                <svg class="w-8 h-8 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+            
+            <!-- Sign In Button -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSepo9iPjYaBzbuM65Dx73TKm9W8Il2KXs9GGCC64hpN0nk2Fg/viewform?usp=sharing" class="group relative px-8 py-3 bg-[#C6943B] hover:bg-[#D4A859] border-2 border-[#C6943B] hover:border-[#E5B365] rounded-full transition-all duration-300 ease-in-out inline-block">
+                <span class="relative flex items-center gap-2 text-white font-medium tracking-wider group-hover:text-white">
+                    <span>{{ _('sign_in') }}</span>
+                    <svg class="w-5 h-5 transform group-hover:translate-x-1 {{'rotate-180' if current_lang == 'ar' else 'rotate-0'}} transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </span>
+            </a>
         </div>
     </div>
+</section>
 
-    <style>
+
+<style>
     /* Custom Floating Animation */
     @keyframes float {
         0%, 100% {
@@ -69,9 +83,6 @@
         animation: float 3s ease-in-out infinite;
     }
     </style>
-
-    </div>
-</section>
 
     <style>
         /* Enhance existing animations */
@@ -470,12 +481,13 @@
                     <!-- <a href="{{ url_for('static', filename='files/Delegate Guide.pdf', lang=current_lang) }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300"> -->
                         <p class="text-[#E6E6E6] text-xl mb-4">{{ _('coming soon') }}</p>
                     {% else %}
-                        <p class="text-[#E6E6E6] mb-4">{{ _('Detailed guidelines for participation as a Delegate.') }}</p>
+                        <p class="text-[#E6E6E6] text-xl mb-4">{{ _('coming soon') }}</p>
+                        <!-- <p class="text-[#E6E6E6] mb-4">{{ _('Detailed guidelines for participation as a Delegate.') }}</p>
                         <a href="{{ url_for('static', filename='files/Delegate Guide.pdf', lang=current_lang) }}" class="inline-flex items-center text-white hover:text-[#4F7B7B] transition-colors duration-300">
                         <span>{{ _('Download PDF') }}</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
+                        </svg> -->
                     {% endif %}
                     </a>
                 </div>

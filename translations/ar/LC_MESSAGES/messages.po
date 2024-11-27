@@ -199,3 +199,7 @@ msgstr "لغة الحوار"
 #: templates/committee.html:120
 msgid "coming soon"
 msgstr "يتوفر قريبا"
+
+#: templates/home.html:61
+msgid "sign_in"
+msgstr "قدم الان"
