@@ -1,5 +1,52 @@
 // static/js/main.js
 
+
+
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1, // Default for smaller screens
+    spaceBetween: 20, // Default spacing
+    loop: true, // Infinite scrolling
+    speed: 500, // Faster transition speed (in ms)
+    autoplay: {
+        delay: 2500, // Auto-slide every 2.5 seconds
+        disableOnInteraction: false, // Continue autoplay after interaction
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        // clickable: true, // Allow pagination to navigate slides
+        // dynamicBullets: true, // Show dynamic bullets for better UX
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1, // Show 1 slide for small screens
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 2, // Show 2 slides for medium screens
+            spaceBetween: 15,
+        },
+        1024: {
+            slidesPerView: 3, // Show 3 slides for larger screens
+            spaceBetween: 20,
+        },
+    },
+    effect: 'slide', // Smooth sliding effect (alternative: 'fade' or 'cube')
+});
+
+
+
+
+
+
+
+
+
+
+
 // Debounce function to limit scroll event firing
 function debounce(func, wait = 10) {
     let timeout;

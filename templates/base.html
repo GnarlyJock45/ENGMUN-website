@@ -26,6 +26,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -425,7 +426,8 @@
 
 
 
-    
+    <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}" defer></script>
+
 
 
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>

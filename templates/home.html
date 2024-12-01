@@ -459,7 +459,7 @@
 
 
 <!-- Downloadable Files Section -->
-<section class="py-16 bg-white">
+<section class="py-12 bg-white">
     <div class="container mx-auto px-4 animate-on-scroll delay-300 ">
         <h2 class="text-3xl font-bold text-center text-[#333333] mb-12">{{ _('Resources you need') }}</h2>
         <div class="grid max-w-4xl mx-auto">
@@ -517,7 +517,7 @@
 
 
 <!-- Committees Section -->
-<section class="py-16 bg-gray-50 ">
+<section class="py-16 my-8 bg-gray-50 ">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-[#333333] mb-12 animate-on-scroll delay-200">{{ _('Committees') }}</h2>
 
@@ -612,6 +612,112 @@
         </div>
     </div>
 </section>
+
+
+<!-- Success Partners section -->
+<!-- <section class="mt-16">
+
+    <h2 class="text-3xl font-bold text-center text-[#333333] mb-12 animate-on-scroll delay-200">{{ _('success_partners') }}</h2>
+    {% for partner_id, partner in partners.items() %}
+    
+    <img src="" alt="">
+
+    <span>{{partner.name}}</span>
+    
+    {% endfor %}
+</section> -->
+
+
+<!-- <section class="mt-16">
+    <h2 class="text-3xl font-bold text-center text-[#333333] mb-12 animate-on-scroll delay-200">
+        {{ _('success_partners') }}
+    </h2>
+
+    <div class="swiper-container relative mx-auto max-w-full overflow-hidden animate-on-scroll delay-400">
+        <div class="swiper-wrapper">
+            {% for partner_id, partner in partners.items() %}
+            <div class="swiper-slide p-4">
+
+                <a 
+                    href="{{ partner.twitter_url }}" 
+                    target="_blank" 
+                    class="block relative overflow-hidden rounded-xl bg-gradient-to-br from-[#D4DBDA] to-[#f8eedf] shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                >
+
+                <div class="absolute inset-0 border-2 border-amber-300 rounded-xl opacity-30"></div>
+                    
+
+                    <div class="p-6">
+                        <img 
+                            src="/static/images/main_logo.png" 
+                            alt="{{ partner.name }}" 
+                            class="w-full h-40 object-cover"
+                        >
+                        
+
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-amber-200 to-amber-400 opacity-20 rounded-bl-full"></div>
+                        <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-emerald-600 to-emerald-400 opacity-10 rounded-tr-full"></div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+
+        <div class="swiper-button-prev !mt-0 {{'!-mr-1' if current_lang == 'ar' else '!-ml-1'}} "></div>
+        <div class="swiper-button-next !mt-0 {{'!-ml-1' if current_lang == 'ar' else '!-mr-1'}} "></div>
+    </div>
+</section> -->
+
+<!-- <style>
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        top: 50%; /* Center vertically relative to swiper-container */
+        transform: translateY(-50%); /* Adjust for exact vertical centering */
+        z-index: 10; /* Ensure visibility above slides */
+        width: 50px; /* Button size */
+        height: 50px;
+        background-color: #e9efef; /* Slightly opaque background */
+        border-radius: 50%; /* Circular buttons */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s ease;
+    }
+
+    /* Add hover effect for a better experience */
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+        transform: translateY(-50%) scale(1.15); /* Slight scale effect */
+    }
+
+
+
+    /* Adjust arrow icons */
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 20px; /* Adjust size for visibility */
+        color: #333; /* Dark color for contrast */
+    }
+
+    /* Ensure swiper-wrapper slides fit perfectly */
+    .swiper-wrapper {
+        padding-top: 10px; /* Optional: Space for pagination or additional styles */
+
+    }
+
+    
+</style> -->
+
+
+
+
 
 
 <style>

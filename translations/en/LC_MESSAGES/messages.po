@@ -215,3 +215,8 @@ msgstr "Coming Soon"
 #: templates/home.html:61
 msgid "sign_in"
 msgstr "Apply Now"
+
+
+#: templates/home.html:619
+msgid "success_partners"
+msgstr "Success Partners"

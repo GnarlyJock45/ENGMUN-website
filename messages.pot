@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-27 15:25+0300\n"
+"POT-Creation-Date: 2024-11-29 19:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: app.py:81 templates/base.html:245
+#: app.py:98 templates/base.html:245
 msgid "Home"
 msgstr ""
 
-#: app.py:85
-msgid "Event Details"
-msgstr ""
-
-#: app.py:90 templates/team.html:17
+#: app.py:103 templates/team.html:17
 msgid "Executive Team"
 msgstr ""
 
-#: app.py:100
+#: app.py:112
 msgid "Committee"
 msgstr ""
 
@@ -37,11 +33,11 @@ msgstr ""
 msgid "Team"
 msgstr ""
 
-#: templates/base.html:355 templates/home.html:525
+#: templates/base.html:355 templates/home.html:522
 msgid "Committees"
 msgstr ""
 
-#: templates/committee.html:59 templates/home.html:589
+#: templates/committee.html:59 templates/home.html:586
 msgid "dialogue_language"
 msgstr ""
 
@@ -65,7 +61,7 @@ msgstr ""
 msgid "Resources"
 msgstr ""
 
-#: templates/committee.html:121 templates/home.html:482 templates/home.html:484
+#: templates/committee.html:121 templates/home.html:479 templates/home.html:481
 msgid "coming soon"
 msgstr ""
 
@@ -89,93 +85,97 @@ msgstr ""
 msgid "sign_in"
 msgstr ""
 
-#: templates/home.html:258
+#: templates/home.html:255
 msgid "Our Vision"
 msgstr ""
 
-#: templates/home.html:287
+#: templates/home.html:284
 msgid ""
 "Leading in developing a generation of engineers capable of facing global "
 "challenges through innovation and international cooperation."
 msgstr ""
 
-#: templates/home.html:313
+#: templates/home.html:310
 msgid "Why EngMUN?"
 msgstr ""
 
-#: templates/home.html:314
+#: templates/home.html:311
 msgid "First in Region"
 msgstr ""
 
-#: templates/home.html:323
+#: templates/home.html:320
 msgid "Build a Professional Network"
 msgstr ""
 
-#: templates/home.html:324
+#: templates/home.html:321
 msgid "Network with future leaders to expand your career horizons"
 msgstr ""
 
-#: templates/home.html:334
+#: templates/home.html:331
 msgid "Enhance Diplomacy"
 msgstr ""
 
-#: templates/home.html:335
+#: templates/home.html:332
 msgid "Develop your abilities in negotiation, debating, and problem-solving"
 msgstr ""
 
-#: templates/home.html:345
+#: templates/home.html:342
 msgid "Innovative Problem Solving"
 msgstr ""
 
-#: templates/home.html:346
+#: templates/home.html:343
 msgid "Contribute creative solutions to real global challenges"
 msgstr ""
 
-#: templates/home.html:365
+#: templates/home.html:362
 msgid "Message from SG"
 msgstr ""
 
-#: templates/home.html:368
+#: templates/home.html:365
 msgid "message from sg content"
 msgstr ""
 
-#: templates/home.html:372
+#: templates/home.html:369
 msgid "secretary general"
 msgstr ""
 
-#: templates/home.html:409
+#: templates/home.html:406
 msgid "Meet the Executive Team"
 msgstr ""
 
-#: templates/home.html:424
+#: templates/home.html:421
 msgid "View Team"
 msgstr ""
 
-#: templates/home.html:467
+#: templates/home.html:464
 msgid "Resources you need"
 msgstr ""
 
-#: templates/home.html:478
+#: templates/home.html:475
 msgid "Delegate Guide"
 msgstr ""
 
-#: templates/home.html:479 templates/home.html:485
+#: templates/home.html:476 templates/home.html:482
 msgid "Detailed guidelines for participation as a Delegate."
 msgstr ""
 
-#: templates/home.html:487 templates/home.html:508
+#: templates/home.html:484 templates/home.html:505
 msgid "Download PDF"
 msgstr ""
 
-#: templates/home.html:505
+#: templates/home.html:502
 msgid "Chair Guide"
 msgstr ""
 
-#: templates/home.html:506
+#: templates/home.html:503
 msgid "Detailed guidelines for participation as a Chair."
 msgstr ""
 
-#: templates/home.html:603
+#: templates/home.html:600
 msgid "View Guide"
+msgstr ""
+
+#: templates/home.html:619
+msgid "success_partners"
 msgstr ""
 

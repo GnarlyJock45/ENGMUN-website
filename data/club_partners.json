@@ -1,0 +1,34 @@
+{
+    "partners": [
+      {
+        "id": "partner1",
+        "name": "Tech Innovation Corp",
+        "image": "/static/images/partners/tech-innovation.jpg",
+        "twitter_url": "https://twitter.com/techinnovation"
+      },
+      {
+        "id": "partner2",
+        "name": "Global Solutions Ltd",
+        "image": "/static/images/partners/global-solutions.jpg",
+        "twitter_url": "https://twitter.com/globalsolutions"
+      },
+      {
+        "id": "partner3",
+        "name": "Global Solutions Ltd",
+        "image": "/static/images/partners/global-solutions.jpg",
+        "twitter_url": "https://twitter.com/globalsolutions"
+      },
+      {
+        "id": "partner4",
+        "name": "Global Solutions Ltd",
+        "image": "/static/images/partners/global-solutions.jpg",
+        "twitter_url": "https://twitter.com/globalsolutions"
+      },
+      {
+        "id": "partner5",
+        "name": "Future Systems",
+        "image": "/static/images/partners/future-systems.jpg",
+        "twitter_url": "https://twitter.com/futuresystems"
+      }
+    ]
+  }

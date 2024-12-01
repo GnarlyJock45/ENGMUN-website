@@ -73,22 +73,34 @@ def load_team_members():
             data = json.load(f)
         team_members_dict = {member['id']: member for member in data['team_members']}
         return team_members_dict
+    
+
+
+# Function to load partners data
+# def load_partners():
+#     filepath = os.path.join(app.root_path, 'data', 'club_partners.json')
+#     try:
+#         with open(filepath, 'r', encoding='utf-8') as f:
+#             data = json.load(f)
+#         partners_dict = {partner['id']: partner for partner in data['partners']}
+#         return partners_dict
+#     except FileNotFoundError:
+#         return {}  # Return empty dict if file not found
+
+# @app.context_processor
+# def inject_partners():
+#     partners = load_partners()
+#     return dict(partners=partners)
 
 
 @app.route('/')
 def home():
-    committees = load_committees()
     return render_template('home.html', title=_('Home'))
-
-@app.route('/concert')
-def concert():
-    return render_template('concert.html', title=_('Event Details'))
 
 @app.route('/team')
 def team():
     team_members = load_team_members()
     return render_template('team.html', title=_('Executive Team'), team_members=team_members)
-
 
 
 @app.route('/committee/<committee_id>')
