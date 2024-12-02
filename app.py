@@ -1,5 +1,7 @@
 from flask import Flask, render_template, abort, request, url_for, redirect
 from flask_babel import Babel, gettext as _
+from datetime import datetime
+
 
 
 
@@ -34,6 +36,11 @@ def inject_lang():
 def inject_committees():
     committees = load_committees()
     return dict(committees=committees)
+
+# @app.route('/')
+# def countdown():
+    
+#     return render_template('index.html', end_time=end_time)
 
 
 # Load committee data once when the app starts
@@ -95,7 +102,8 @@ def load_team_members():
 
 @app.route('/')
 def home():
-    return render_template('home.html', title=_('Home'))
+    end_time = datetime(2025, 1, 27, 23, 59, 59)  # Set your target date and time
+    return render_template('home.html', title=_('Home'), end_time=end_time)
 
 @app.route('/team')
 def team():

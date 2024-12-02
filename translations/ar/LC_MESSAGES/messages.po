@@ -208,3 +208,20 @@ msgstr "قدم الان"
 #: templates/home.html:619
 msgid "success_partners"
 msgstr "شركاء النجاح"
+
+
+#: templates/home.html:38
+msgid "days"
+msgstr "الايام"
+
+#: templates/home.html:43
+msgid "hours"
+msgstr "الساعات"
+
+#: templates/home.html:48
+msgid "minutes"
+msgstr "الدقائق"
+
+#: templates/home.html:53
+msgid "seconds"
+msgstr "الثواني"

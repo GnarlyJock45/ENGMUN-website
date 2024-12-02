@@ -220,3 +220,19 @@ msgstr "Apply Now"
 #: templates/home.html:619
 msgid "success_partners"
 msgstr "Success Partners"
+
+#: templates/home.html:38
+msgid "days"
+msgstr "Days"
+
+#: templates/home.html:43
+msgid "hours"
+msgstr "Hours"
+
+#: templates/home.html:48
+msgid "minutes"
+msgstr "Minutes"
+
+#: templates/home.html:53
+msgid "seconds"
+msgstr "Seconds"
