@@ -301,40 +301,61 @@
 
 
 <!-- Slogan Section -->
-<section class="py-20 bg-gradient-to-br from-[#4f7b7a]/10 to-[#C6943B]/10 animate-on-scroll">
+<section class="py-20 bg-gradient-to-br from-[#4f7b7a]/10 to-[#C6943B]/10">
     <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- English Slogan -->
-            <div class="mb-6">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#4f7b7a] leading-tight animate-on-scroll delay-100">
-                    Engineering a 
-                    <span class="relative inline-block">
-                        sustainable
-                        <span class="absolute bottom-0 left-0 w-full h-2 bg-[#C6943B]/20"></span>
-                    </span>
-                    future
-                </h2>
-            </div>
-
-            <!-- Decorative Divider -->
-            <div class="flex items-center justify-center my-8">
-                <div class="w-16 h-px bg-[#4f7b7a]/30"></div>
-                <div class="mx-4">
-                    <svg class="w-6 h-6 text-[#C6943B]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4f7b7a"/>
-                    </svg>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <!-- Text Content -->
+            <div class="space-y-8 text-center">
+                <!-- English Slogan -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#4f7b7a] leading-tight">
+                        Engineering a 
+                        <span class="relative inline-block">
+                            sustainable
+                            <span class="absolute bottom-0 left-0 w-full h-2 bg-[#C6943B]/20"></span>
+                        </span>
+                        future
+                    </h2>
                 </div>
-                <div class="w-16 h-px bg-[#4f7b7a]/30"></div>
+
+                <!-- Decorative Divider -->
+                <div class="flex items-center justify-center">
+                    <div class="w-16 h-px bg-[#4f7b7a]/30"></div>
+                    <div class="mx-4">
+                        <svg class="w-6 h-6 text-[#C6943B]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="#4f7b7a"/>
+                        </svg>
+                    </div>
+                    <div class="w-16 h-px bg-[#4f7b7a]/30"></div>
+                </div>
+
+                <!-- Arabic Slogan -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight" dir="rtl">
+                        <span class="inline-block mx-2 text-[#4f7b7a]">ابتكر،</span>
+                        <span class="inline-block mx-2 text-[#C6943B]">هندس،</span>
+                        <span class="inline-block mx-2 text-[#4f7b7a]">أثر</span>
+                    </h2>
+                </div>
             </div>
 
-            <!-- Arabic Slogan -->
-            <div class="mt-6">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#C6943B] leading-tight" dir="rtl">
-                    <span class="inline-block mx-2 text-[#4f7b7a] animate-on-scroll delay-100">ابتكر،</span>
-                    <span class="inline-block mx-2 text-[#C6943B] animate-on-scroll delay-300">هندس،</span>
-                    <span class="inline-block mx-2 text-[#4f7b7a] animate-on-scroll delay-500">أثر</span>
-                </h2>
+            <!-- Video Section - Right Column -->
+            <div class="flex justify-center">
+                <div class="relative w-3/4 md:w-2/3 aspect-[9/12] rounded-lg overflow-hidden shadow-xl">
+                    <video 
+                        class="absolute inset-0 w-full h-full object-cover"
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                    >
+                        <source src="{{ url_for('static', filename='videos/theme_video.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Overlay gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#4f7b7a]/50 to-transparent pointer-events-none"></div>
+                </div>
             </div>
         </div>
     </div>
