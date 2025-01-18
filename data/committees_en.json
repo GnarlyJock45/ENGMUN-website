@@ -21,7 +21,7 @@
                     "description": "Creating Smart, Green Cities"
                 }
             ],
-            "resources": []
+            "resources": "files/arab_league_guide.pdf"
         },
         {
             "id": "unhrc",
@@ -44,7 +44,7 @@
                     "description": "Ensuring Access to the Internet and Digital Tools"
                 }
             ],
-            "resources": []
+            "resources": "files/UNHRC_guide.pdf"
         },
         {
             "id": "uncsw",
@@ -90,7 +90,7 @@
                     "description": "Keeping Earth's Orbit Clean"
                 }
             ],
-            "resources": []
+            "resources": "files/UNOOSA_guide.pdf"
         }
     ]
 }

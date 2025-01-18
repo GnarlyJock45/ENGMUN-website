@@ -21,7 +21,7 @@
                     "description": "لتعزيز التكامل الإقليمي في جامعة الدول العربية"
                 }
             ],
-            "resources": []
+            "resources": "files/arab_league_guide.pdf"
         },
         {
             "id": "unhrc",
@@ -44,7 +44,7 @@
                     "description": "ضمان الوصول إلى الإنترنت والأدوات الرقمية"
                 }
             ],
-            "resources": []
+            "resources": "files/UNHRC_guide.pdf"
         },
         {
             "id": "uncsw",
@@ -67,7 +67,7 @@
                     "description": "تعزيز الفرص وتوسيع الآفاق في مجالات العلوم والتكنولوجيا والهندسة والرياضيات"
                 }
             ],
-            "resources": []
+            "resources": ""
         },
         {
             "id": "unoosa",
@@ -90,7 +90,7 @@
                     "description": "الحفاظ على مدار الأرض نظيفًا"
                 }
             ],
-            "resources": []
+            "resources": "files/UNOOSA_guide.pdf"
         }
     ]
 }

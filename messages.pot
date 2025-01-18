@@ -1,14 +1,14 @@
 # Translations template for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
+# Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-01 20:01+0300\n"
+"POT-Creation-Date: 2025-01-17 20:40+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,11 +33,11 @@ msgstr ""
 msgid "Team"
 msgstr ""
 
-#: templates/base.html:356 templates/home.html:553
+#: templates/base.html:356 templates/home.html:734
 msgid "Committees"
 msgstr ""
 
-#: templates/committee.html:59 templates/home.html:617
+#: templates/committee.html:59 templates/home.html:798
 msgid "dialogue_language"
 msgstr ""
 
@@ -61,117 +61,113 @@ msgstr ""
 msgid "Resources"
 msgstr ""
 
-#: templates/committee.html:121 templates/home.html:510 templates/home.html:512
+#: templates/committee.html:121 templates/home.html:691 templates/home.html:693
 msgid "coming soon"
 msgstr ""
 
-#: templates/home.html:38
+#: templates/home.html:100
 msgid "days"
 msgstr ""
 
-#: templates/home.html:43
+#: templates/home.html:105
 msgid "hours"
 msgstr ""
 
-#: templates/home.html:48
+#: templates/home.html:110
 msgid "minutes"
 msgstr ""
 
-#: templates/home.html:53
+#: templates/home.html:115
 msgid "seconds"
 msgstr ""
 
-#: templates/home.html:61
-msgid "sign_in"
-msgstr ""
-
-#: templates/home.html:286
+#: templates/home.html:467
 msgid "Our Vision"
 msgstr ""
 
-#: templates/home.html:315
+#: templates/home.html:496
 msgid ""
 "Leading in developing a generation of engineers capable of facing global "
 "challenges through innovation and international cooperation."
 msgstr ""
 
-#: templates/home.html:341
+#: templates/home.html:522
 msgid "Why EngMUN?"
 msgstr ""
 
-#: templates/home.html:342
+#: templates/home.html:523
 msgid "First in Region"
 msgstr ""
 
-#: templates/home.html:351
+#: templates/home.html:532
 msgid "Build a Professional Network"
 msgstr ""
 
-#: templates/home.html:352
+#: templates/home.html:533
 msgid "Network with future leaders to expand your career horizons"
 msgstr ""
 
-#: templates/home.html:362
+#: templates/home.html:543
 msgid "Enhance Diplomacy"
 msgstr ""
 
-#: templates/home.html:363
+#: templates/home.html:544
 msgid "Develop your abilities in negotiation, debating, and problem-solving"
 msgstr ""
 
-#: templates/home.html:373
+#: templates/home.html:554
 msgid "Innovative Problem Solving"
 msgstr ""
 
-#: templates/home.html:374
+#: templates/home.html:555
 msgid "Contribute creative solutions to real global challenges"
 msgstr ""
 
-#: templates/home.html:393
+#: templates/home.html:574
 msgid "Message from SG"
 msgstr ""
 
-#: templates/home.html:396
+#: templates/home.html:577
 msgid "message from sg content"
 msgstr ""
 
-#: templates/home.html:400
+#: templates/home.html:581
 msgid "secretary general"
 msgstr ""
 
-#: templates/home.html:437
+#: templates/home.html:618
 msgid "Meet the Executive Team"
 msgstr ""
 
-#: templates/home.html:452
+#: templates/home.html:633
 msgid "View Team"
 msgstr ""
 
-#: templates/home.html:495
+#: templates/home.html:676
 msgid "Resources you need"
 msgstr ""
 
-#: templates/home.html:506
+#: templates/home.html:687
 msgid "Delegate Guide"
 msgstr ""
 
-#: templates/home.html:507 templates/home.html:513
+#: templates/home.html:688 templates/home.html:694
 msgid "Detailed guidelines for participation as a Delegate."
 msgstr ""
 
-#: templates/home.html:515 templates/home.html:536
+#: templates/home.html:696 templates/home.html:717
 msgid "Download PDF"
 msgstr ""
 
-#: templates/home.html:533
+#: templates/home.html:714
 msgid "Chair Guide"
 msgstr ""
 
-#: templates/home.html:534
+#: templates/home.html:715
 msgid "Detailed guidelines for participation as a Chair."
 msgstr ""
 
-#: templates/home.html:631
+#: templates/home.html:812
 msgid "View Guide"
 msgstr ""
 

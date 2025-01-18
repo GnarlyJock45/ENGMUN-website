@@ -61,7 +61,7 @@ msgstr "الخبرة"
 
 #: templates/committee.html:64
 msgid "Study Guide"
-msgstr "دليل الدراسة"
+msgstr "تقرير قائد اللجنة"
 
 #: templates/committee.html:65
 msgid "Download"

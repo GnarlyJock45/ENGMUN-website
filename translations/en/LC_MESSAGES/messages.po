@@ -60,7 +60,7 @@ msgstr "Experience"
 
 #: templates/committee.html:64
 msgid "Study Guide"
-msgstr "Study Guide"
+msgstr "Chair Report"
 
 #: templates/committee.html:65
 msgid "Download"
