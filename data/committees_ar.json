@@ -21,7 +21,11 @@
                     "description": "لتعزيز التكامل الإقليمي في جامعة الدول العربية"
                 }
             ],
-            "resources": "files/arab_league_guide.pdf"
+            "resources": "files/arab_league_guide.pdf",
+            "chairs": [
+                {"name": "شهد عادل بالغنيم", "phone": "0553712366"},
+                {"name": "طارق فهد الصالح", "phone": "0536130310"}
+            ]
         },
         {
             "id": "unhrc",
@@ -44,7 +48,11 @@
                     "description": "ضمان الوصول إلى الإنترنت والأدوات الرقمية"
                 }
             ],
-            "resources": "files/UNHRC_guide.pdf"
+            "resources": "files/UNHRC_guide.pdf",
+            "chairs": [
+                {"name": "وسن الجغيمان", "phone": "0502322727"},
+                {"name": "خولة الدهنين", "phone": "0592358877"}
+            ]
         },
         {
             "id": "uncsw",
@@ -67,7 +75,11 @@
                     "description": "تعزيز الفرص وتوسيع الآفاق في مجالات العلوم والتكنولوجيا والهندسة والرياضيات"
                 }
             ],
-            "resources": ""
+            "resources": "",
+            "chairs": [
+                {"name": "سديم النويس", "phone": "0536551355"},
+                {"name": "شعاع الحمام", "phone": "0563271599"}
+            ]
         },
         {
             "id": "unoosa",
@@ -90,7 +102,11 @@
                     "description": "الحفاظ على مدار الأرض نظيفًا"
                 }
             ],
-            "resources": "files/UNOOSA_guide.pdf"
+            "resources": "files/UNOOSA_guide.pdf",
+            "chairs": [
+                {"name": "طرفه الشهاب", "phone": "0501281305"},
+                {"name": "فهد الحياني", "phone": "0500582449"}
+            ]
         }
     ]
 }

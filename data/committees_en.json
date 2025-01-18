@@ -21,7 +21,11 @@
                     "description": "Creating Smart, Green Cities"
                 }
             ],
-            "resources": "files/arab_league_guide.pdf"
+            "resources": "files/arab_league_guide.pdf",
+            "chairs": [
+                {"name": "Shahad Balghunaim", "phone": "0553712366"},
+                {"name": "Tareq Al-Saleh", "phone": "0536130310"}
+            ]
         },
         {
             "id": "unhrc",
@@ -44,7 +48,11 @@
                     "description": "Ensuring Access to the Internet and Digital Tools"
                 }
             ],
-            "resources": "files/UNHRC_guide.pdf"
+            "resources": "files/UNHRC_guide.pdf",
+            "chairs": [
+                {"name": "Wasan AlJughaiman", "phone": "0502322727"},
+                {"name": "Khawla Alduhneen ", "phone": "0592358877"}
+            ]
         },
         {
             "id": "uncsw",
@@ -67,7 +75,11 @@
                     "description": "Breaking Barriers and Building Bridges in STEM"
                 }
             ],
-            "resources": []
+            "resources": [],
+            "chairs": [
+                {"name": "Sadeem Alnowis", "phone": "0536551355"},
+                {"name": "Shua'a Alhumam", "phone": "0563271599"}
+            ]
         },
         {
             "id": "unoosa",
@@ -90,7 +102,11 @@
                     "description": "Keeping Earth's Orbit Clean"
                 }
             ],
-            "resources": "files/UNOOSA_guide.pdf"
+            "resources": "files/UNOOSA_guide.pdf",
+            "chairs": [
+                {"name": "Tarfah AlShehab", "phone": "0501281305"},
+                {"name": "Fahad AlHayani", "phone": "0500582449"}
+            ]
         }
     ]
 }
