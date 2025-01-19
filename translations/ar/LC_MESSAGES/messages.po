@@ -225,3 +225,8 @@ msgstr "الدقائق"
 #: templates/home.html:53
 msgid "seconds"
 msgstr "الثواني"
+
+
+#: templates/committee.html:77
+msgid "Committee Chairs"
+msgstr "قادة اللجنة"

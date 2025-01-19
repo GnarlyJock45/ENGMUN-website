@@ -65,7 +65,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                             </svg>
                         </div>
-                        <p class="text-sm text-gray-600">{{ _('Study Guide') }}</p>
+                        <p class="text-sm text-gray-600">
+                            {{ "تقرير قائد اللجنة" if (committee.language == 'العربية' or committee.language == "Arabic") else 'Chair Report' }}
+                        </p>
                         <a href="{{ url_for('static', filename=committee.resources) }}" class="font-bold text-[#C6943B] hover:text-[#A67B31]">{{ _('Download') }}</a>
                     </div>
                 </div>
@@ -74,7 +76,9 @@
 
             <!-- Committee Chairs -->
             <div class="bg-white rounded-xl shadow-lg p-6 mb-12 animate-on-scroll backdrop-blur-sm bg-white/90">
-                <h2 class="text-2xl font-bold text-[#4F7B7B] mb-6 text-center">{{ _('Committee Chairs') }}</h2>
+                <h2 class="text-2xl font-bold text-[#4F7B7B] mb-6 text-center">
+                    {{ "قادة اللجنة" if (committee.language == 'العربية' or committee.language == "Arabic") else 'Committee Chairs' }}
+                </h2>
                 <div class="grid grid-cols-2 gap-6">
                     {% for chair in committee.chairs %}
                         <div class="text-center p-4 rounded-lg hover:bg-gray-50 transition-all duration-300">
