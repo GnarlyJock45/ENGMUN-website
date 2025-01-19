@@ -75,7 +75,7 @@
                     "description": "Breaking Barriers and Building Bridges in STEM"
                 }
             ],
-            "resources": [],
+            "resources": ["files/UNCSW_guide.pdf"],
             "chairs": [
                 {"name": "Sadeem Alnowis", "phone": "0536551355"},
                 {"name": "Shua'a Alhumam", "phone": "0563271599"}
