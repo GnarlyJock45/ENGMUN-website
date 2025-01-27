@@ -208,54 +208,59 @@
 
 
 <script>
-    // Enhanced countdown script with animations
-    const endTime = new Date("2025-01-26T23:59:59").getTime();
-    const countdownElements = {
-        days: document.getElementById('days'),
-        hours: document.getElementById('hours'),
-        minutes: document.getElementById('minutes'),
-        seconds: document.getElementById('seconds')
-    };
+// Enhanced countdown script with animations
+const endTime = new Date("2025-01-26T23:59:59").getTime();
+const countdownElements = {
+    days: document.getElementById('days'),
+    hours: document.getElementById('hours'),
+    minutes: document.getElementById('minutes'),
+    seconds: document.getElementById('seconds')
+};
 
-    let countdownInterval; // To store the interval reference
+let countdownInterval; // To store the interval reference
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const timeLeft = endTime - now;
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = endTime - now;
 
-        if (timeLeft <= 0) {
-            clearInterval(countdownInterval); // Stop the interval
-            document.getElementById("countdown").innerHTML = "<div class='text-3xl font-bold text-[#C6943B] animate-fade-in-up'>Event has Started!</div>";
-            return;
-        }
-
-        // Calculate time units
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        // Update with animations
-        updateWithAnimation(countdownElements.days, days);
-        updateWithAnimation(countdownElements.hours, hours);
-        updateWithAnimation(countdownElements.minutes, minutes);
-        updateWithAnimation(countdownElements.seconds, seconds);
+    if (timeLeft <= 0) {
+        clearInterval(countdownInterval); // Stop the interval
+        // Set all countdown values to 0
+        countdownElements.days.textContent = "00";
+        countdownElements.hours.textContent = "00";
+        countdownElements.minutes.textContent = "00";
+        countdownElements.seconds.textContent = "00";
+        return;
     }
 
-    function updateWithAnimation(element, value) {
-        const currentValue = parseInt(element.textContent);
-        if (currentValue !== value) {
-            element.classList.add('flip-animation');
-            setTimeout(() => {
-                element.textContent = String(value).padStart(2, '0');
-                element.classList.remove('flip-animation');
-            }, 300); // Match animation duration
-        }
-    }
+    // Calculate time units
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Initial call and interval setup
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    // Update with animations
+    updateWithAnimation(countdownElements.days, days);
+    updateWithAnimation(countdownElements.hours, hours);
+    updateWithAnimation(countdownElements.minutes, minutes);
+    updateWithAnimation(countdownElements.seconds, seconds);
+}
+
+function updateWithAnimation(element, value) {
+    const currentValue = parseInt(element.textContent);
+    if (currentValue !== value) {
+        element.classList.add('flip-animation');
+        setTimeout(() => {
+            element.textContent = String(value).padStart(2, '0');
+            element.classList.remove('flip-animation');
+        }, 300); // Match animation duration
+    }
+}
+
+// Initial call and interval setup
+updateCountdown();
+countdownInterval = setInterval(updateCountdown, 1000);
+
 </script>
 
 
