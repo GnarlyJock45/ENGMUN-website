@@ -217,11 +217,14 @@
         seconds: document.getElementById('seconds')
     };
 
+    let countdownInterval; // To store the interval reference
+
     function updateCountdown() {
         const now = new Date().getTime();
         const timeLeft = endTime - now;
 
         if (timeLeft <= 0) {
+            clearInterval(countdownInterval); // Stop the interval
             document.getElementById("countdown").innerHTML = "<div class='text-3xl font-bold text-[#C6943B] animate-fade-in-up'>Event has Started!</div>";
             return;
         }
